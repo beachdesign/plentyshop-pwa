@@ -1,20 +1,15 @@
-export default {
-  fallbackLocale: process.env.DEFAULTLANGUAGE ?? 'en',
-  detectBrowserLanguage: false,
+export default defineI18nConfig(() => ({
+  legacy: false,
+  // Nur Deutsch zulassen:
+  availableLocales: ['de'],
+  fallbackLocale: 'de',
   numberFormats: {
-    en: {
-      currency: {
-        style: 'currency',
-        currency: 'GBP',
-        currencyDisplay: 'symbol',
-      },
-    },
     de: {
-      currency: {
-        style: 'currency',
-        currency: 'EUR',
-        currencyDisplay: 'symbol',
-      },
+      currency: { style: 'currency', currency: 'EUR', currencyDisplay: 'symbol' },
+    },
+    en: { 
+      currency: { style: 'currency', currency: 'GBP', currencyDisplay: 'symbol' } 
     },
   },
-};
+  warnHtmlMessage: false,
+}));
