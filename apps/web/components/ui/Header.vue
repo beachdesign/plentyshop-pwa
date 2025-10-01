@@ -3,7 +3,8 @@
     <template v-if="viewport.isGreaterOrEquals('md')">
       <!-- <UiSearch class="hidden md:block flex-1" /> -->
       <nav class="hidden ml-4 md:flex md:flex-row md:flex-nowrap">
-        <template v-if="localeCodes.length > 1">
+        <!-- <template v-if="localeCodes.length > 1"> -->
+        <template v-if="false">
           <UiButton
             v-if="!isLanguageSelectOpen"
             class="group relative hover:!bg-header-400 active:!bg-header-400 mr-1 -ml-0.5 rounded-md cursor-pointer"
@@ -128,7 +129,7 @@
 
     <div v-if="viewport.isLessThan('lg')">
       <UiButton
-        v-if="localeCodes.length > 1"
+        v-if="false"
         variant="tertiary"
         class="relative text-white hover:text-white active:text-white hover:bg-header-400 active:bg-header-400 rounded-md md:hidden"
         square
@@ -137,7 +138,7 @@
         :disabled="(showConfigurationDrawer && isEditing) || (showConfigurationDrawer && disableActions)"
         @click="toggleLanguageSelect()"
       >
-        <SfIconLanguage />
+        <!-- <SfIconLanguage /> -->
       </UiButton>
       <UiButton
         variant="tertiary"
