@@ -164,20 +164,20 @@ export default defineNuxtConfig({
       registerCookieAsOptOut: process.env.NUXT_PUBLIC_REGISTER_COOKIE_AS_OPT_OUT || 'false',
       manufacturerExternalName: process.env.NUXT_PUBLIC_MANUFACTURER_EXTERNAL_NAME || '0',
       manufacturerName: process.env.NUXT_PUBLIC_MANUFACTURER_NAME || '0',
-      themeColor: process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#062633',
+      themeColor: process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#5F3D2B', // Smart Chip Config
       headerLogo:
         process.env.NUXT_PUBLIC_HEADER_LOGO ||
         process.env.LOGO ||
-        'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Logo/logo.svg',
+        '/brand/logo-black.svg', // Smart Chip Config
       homepageCategoryId: Number(process.env.HOMEPAGE) ?? null,
       shippingTextCategoryId: Number(process.env.SHIPPINGTEXT) ?? null,
       storename: process.env.STORENAME || 'PlentyONE GmbH',
       noCache: process.env.NO_CACHE || '',
       configId: process.env.CONFIG_ID || '',
       isHero: true,
-      font: process.env.NUXT_PUBLIC_FONT || 'Red Hat Text',
+      font: process.env.NUXT_PUBLIC_FONT || 'Manrope',
       blockSize: process.env.NUXT_PUBLIC_BLOCK_SIZE || 'm',
-      primaryColor: process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#062633',
+      primaryColor: process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#5F3D2B', // Smart Chip Config
       defaultSortingOption: process.env.NUXT_PUBLIC_DEFAULT_SORTING_OPTION ?? 'texts.name1_asc',
       defaultSortingSearch: process.env.NUXT_PUBLIC_DEFAULT_SORTING_SEARCH ?? 'item.score',
       availableSortingOptions:
@@ -189,10 +189,10 @@ export default defineNuxtConfig({
         process.env.NUXT_PUBLIC_RECOMMENDED_SECOND_SORTING_OPTION ?? 'sorting.price.avg_asc',
       recommendedThirdSortingOption:
         process.env.NUXT_PUBLIC_RECOMMENDED_THIRD_SORTING_OPTION ?? 'variation.availability.averageDays_asc',
-      secondaryColor: process.env.NUXT_PUBLIC_SECONDARY_COLOR || '#31687d',
+      secondaryColor: process.env.NUXT_PUBLIC_SECONDARY_COLOR || '#5F3D2B', // Smart Chip Config
       headerBackgroundColor:
-        process.env.NUXT_PUBLIC_HEADER_BACKGROUND_COLOR || process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#062633',
-      iconColor: process.env.NUXT_PUBLIC_ICON_COLOR || '#ffffff',
+        process.env.NUXT_PUBLIC_HEADER_BACKGROUND_COLOR || process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#F6F6F6', // Smart Chip Config
+      iconColor: process.env.NUXT_PUBLIC_ICON_COLOR || '#000000', // Smart Chip Config
       showCustomerWishComponent: process.env.NUXT_PUBLIC_SHOW_CUSTOMER_WISH_COMPONENT === 'true',
       bundleItemDisplay: process.env.NUXT_PUBLIC_BUNDLE_ITEM_DISPLAY || '2',
       vatNumberValidation: process.env.NUXT_PUBLIC_VAT_NUMBER_VALIDATION || 'true',
