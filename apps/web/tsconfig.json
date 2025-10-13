@@ -11,7 +11,14 @@
       "./app/utils/vue-tel-input"
     ],
     "verbatimModuleSyntax": false,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+
+    "baseUrl": ".",                             // 👈 NEU
+    "paths": {                                  // 👈 NEU
+      "~/*": ["app/*"],
+      "@/*": ["app/*"],
+      "@theme/*": ["../theme-smartchip/*"]      // Alias für deinen Layer
+    }
   },
   "exclude": ["node_modules", "app/mocks", "__tests__", "cypress.config.ts"]
 }

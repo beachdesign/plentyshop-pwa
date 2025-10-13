@@ -1,0 +1,7 @@
+:root{
+  --sc-primary:#0ea5e9;
+  --sc-secondary:#111827;
+}
+.footer { background: var(--sc-secondary); color:#fff; }
+.footer a { text-decoration:none }
+.footer a:hover { text-decoration:underline }

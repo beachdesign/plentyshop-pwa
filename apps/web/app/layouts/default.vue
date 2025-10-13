@@ -10,16 +10,20 @@
     <UiNavbarBottom v-if="viewport.isLessThan('lg')" />
     <Cookiebar />
     <PreviewMode />
+    <!-- TEST-BANNER: Layout aktiv? -->
+<div style="background:#ff0066;color:#fff;padding:8px;text-align:center">
+  LAYOUT LEBT !!!
+</div>
     <ClientOnly>
-      <FooterBlock v-if="!route.meta.isBlockified" />
+      <FooterBlock />
     </ClientOnly>
     <QuickCheckout v-if="isOpen" :product="product" />
   </div>
 </template>
 
 <script setup lang="ts">
+import FooterBlock from '@theme/components/blocks/Footer/FooterBlock.vue'
 import type { DefaultLayoutProps } from '~/layouts/types';
-import FooterBlock from '~/components/blocks/Footer/Footer.vue';
 
 defineProps<DefaultLayoutProps>();
 

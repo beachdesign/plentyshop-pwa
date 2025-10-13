@@ -1,12 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { validateApiUrl } from './app/utils/pathHelper';
-import cookieConfig from './app/configuration/cookie.config';
-import { nuxtI18nOptions } from './app/configuration/i18n.config';
-import { appConfiguration } from './app/configuration/app.config';
-import { paths } from './app/utils/paths';
-import { resolve } from 'pathe';
+import { validateApiUrl } from './app/utils/pathHelper'
+import cookieConfig from './app/configuration/cookie.config'
+import { nuxtI18nOptions } from './app/configuration/i18n.config'
+import { appConfiguration } from './app/configuration/app.config'
+import { paths } from './app/utils/paths'
+
+// ⬇ pathe-Resolve UMBENENNEN, falls es noch anderswo genutzt wird
+import { resolve as pResolve } from 'pathe'
+
+import { defineNuxtConfig } from 'nuxt/config'
+import { createResolver } from '@nuxt/kit'
+
+// ⬇ Nuxt-Resolver ebenfalls mit Namen versehen
+const { resolve: kResolve } = createResolver(import.meta.url)
 
 export default defineNuxtConfig({
+  extends: ['../theme-smartchip'],
   srcDir: 'app/',
   telemetry: false,
   devtools: { enabled: true },
@@ -25,6 +34,12 @@ export default defineNuxtConfig({
     dirs: ['~/composables', '~/composables/**', '~/utils/**'],
   },
   vite: {
+    resolve: {
+      alias: {
+      // Alias zum Theme-Ordner
+      '@theme': kResolve('../theme-smartchip'),
+      },
+    },
     server: {
       fs: {
         allow: ['../../..'], // relative to the current nuxt.config.ts
@@ -95,6 +110,8 @@ export default defineNuxtConfig({
   pages: true,
   runtimeConfig: {
     public: {
+      iosStoreUrl: process.env.NUXT_PUBLIC_IOS_STORE_URL,
+      androidStoreUrl: process.env.NUXT_PUBLIC_ANDROID_STORE_URL,
       domain: validateApiUrl(process.env.API_URL) ?? process.env.API_ENDPOINT,
       apiEndpoint: process.env.API_ENDPOINT,
       isDev: process.env.NODE_ENV === 'development',

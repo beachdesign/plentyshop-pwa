@@ -1,0 +1,8 @@
+{
+  "extends": "../web/.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "types": ["nuxt", "@nuxtjs/i18n"]
+  },
+  "include": ["./**/*"]
+}
