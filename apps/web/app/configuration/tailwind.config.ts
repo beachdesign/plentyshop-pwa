@@ -1,13 +1,28 @@
 import sfTypography from '@storefront-ui/typography';
 import { tailwindConfig } from '@storefront-ui/vue/tailwind-config';
+import smartchipPreset from '../../../theme-smartchip/tailwind.preset';
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 const fontFamilyText = process.env.NUXT_PUBLIC_FONT || 'Red Hat Text';
 
 export default {
-  presets: [tailwindConfig],
-  content: ['./**/*.vue', '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
+  presets: [tailwindConfig, smartchipPreset],
+  content: [
+    // Web-App (von configuration/ eine Ebene hoch)
+    '../components/**/*.{vue,js,ts}',
+    '../layouts/**/*.vue',
+    '../pages/**/*.vue',
+    '../plugins/**/*.{js,ts}',
+    '../app.vue',
+
+    // 👇 Theme-Layer (von configuration/ zwei Ebenen hoch)
+    '../../theme-smartchip/components/**/*.{vue,js,ts}',
+    '../../theme-smartchip/assets/**/*.{css,scss}',
+
+    // bestehender Storefront-UI-Pfad
+    '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}',
+  ],
   safelist: [
     {
       pattern: /^col-span-(1[0-2]|[1-9])$/,
