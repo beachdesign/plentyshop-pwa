@@ -1,30 +1,34 @@
 <template>
   <section :aria-label="title" class="sc-cardshelf">
-    <!-- Header -->
+    <!-- Header (contained) -->
     <div class="mx-auto max-w-7xl px-6">
       <h2 class="text-2xl sm:text-3xl font-semibold text-neutral-900">{{ title }}</h2>
       <p v-if="subtitle" class="mt-1 text-neutral-600">{{ subtitle }}</p>
     </div>
 
-    <!-- Scroller -->
-    <div class="relative mt-6">
+    <!-- Scroller: full-width, zentriert ausgerichtet -->
+    <div class="relative mt-6 w-screen left-1/2 -ml-[50vw]">
       <div class="overflow-hidden">
         <div
           ref="scroller"
-          class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6"
+          class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
           role="list"
           :aria-label="title"
+          :style="{
+            paddingInlineStart: sideGap + 'px',
+            paddingInlineEnd:   sideGap + 'px',
+          }"
           @scroll="onScroll"
         >
-          <!-- Item -->
+          <!-- Cards -->
           <div
             v-for="(it, i) in items"
             :key="i"
-            class="shrink-0 snap-start"
+            class="shrink-0 snap-center"
             :class="cardWidthClass"
             role="listitem"
           >
-            <article class="relative overflow-hidden rounded-[28px] ring-1 ring-neutral-200 bg-white">
+            <article class="relative overflow-hidden rounded-[20px] ring-1 ring-neutral-200 bg-white shadow-card group">
               <!-- Full-card link -->
               <component
                 :is="linkTag(it.href)"
@@ -41,14 +45,13 @@
                 <img
                   :src="it.image"
                   :alt="it.alt || ''"
-                  class="w-full h-[360px] md:h-[420px] lg:h-[500px] object-cover"
+                  class="w-full h-[320px] md:h-[400px] lg:h-[480px] object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                   loading="lazy"
                 />
-                <!-- kräftiger Verlauf für gute Lesbarkeit -->
                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent"></div>
               </div>
 
-              <!-- Copy im Bildfuß -->
+              <!-- Text -->
               <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
                 <p v-if="it.eyebrow" class="text-[11px] tracking-[0.14em] text-white/80 uppercase">
                   {{ it.eyebrow }}
@@ -65,7 +68,7 @@
         </div>
       </div>
 
-      <!-- Paddle-Nav -->
+      <!-- Paddles -->
       <button
         type="button"
         class="hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/90 shadow-md ring-1 ring-black/10 p-2 disabled:opacity-40"
@@ -86,14 +89,14 @@
       >
         <svg viewBox="0 0 36 36" class="h-6 w-6 fill-neutral-900" aria-hidden="true">
           <path d="M23.5587,16.916 C24.1447,17.5 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.5 15.5427,26.5 C15.1607,26.5 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.528 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 Z"/>
-        </svg>
+      </svg>
       </button>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, nextTick, onBeforeUnmount } from 'vue'
 
 type ShelfItem = {
   title: string
@@ -110,23 +113,33 @@ const props = withDefaults(defineProps<{
   subtitle?: string
   items: ShelfItem[]
   cardWidth?: '50' | '60' | '66'
+  sideGap?: number           // Randabstand links/rechts, z. B. 140px
+  centerOnMount?: boolean    // initial auf Mitte scrollen
+  hideScrollbar?: boolean    // Scrollbar ausblenden
 }>(), {
-  cardWidth: '50'
+  cardWidth: '50',
+  sideGap: 140,
+  centerOnMount: true,
+  hideScrollbar: true,
 })
 
-const scroller = ref<HTMLDivElement | null>(null)
+const scroller = ref<HTMLDivElement|null>(null)
 const canPrev = ref(false)
 const canNext = ref(true)
 
+/* Kartenbreiten */
 const cardWidthClass = computed(() => {
-  // Apple „50“ ≈ 500px; mobil 85vw
   switch (props.cardWidth) {
     case '60': return 'w-[85vw] sm:w-[60vw] lg:w-[540px]'
     case '66': return 'w-[90vw] sm:w-[66vw] lg:w-[600px]'
-    default:   return 'w-[85vw] sm:w-[55vw] lg:w-[500px]' // 50
+    default:   return 'w-[85vw] sm:w-[55vw] lg:w-[500px]'
   }
 })
 
+/* Randabstand für Template */
+const sideGap = computed(() => props.sideGap)
+
+/* Scroll-Logik */
 const updateArrows = () => {
   const el = scroller.value
   if (!el) return
@@ -135,24 +148,53 @@ const updateArrows = () => {
   canNext.value = scrollLeft + clientWidth < scrollWidth - 4
 }
 const onScroll = () => updateArrows()
+
 const scrollBy = (dir: number) => {
   const el = scroller.value
   if (!el) return
   el.scrollBy({ left: dir * el.clientWidth * 0.9, behavior: 'smooth' })
 }
 
-onMounted(() => {
+/* Initial zentrieren: Mitte der gesamten Scrollbreite */
+const centerNow = () => {
+  const el = scroller.value
+  if (!el) return
+  const center = (el.scrollWidth - el.clientWidth) / 2
+  el.scrollTo({ left: Math.max(0, center), behavior: 'instant' as ScrollBehavior })
+}
+
+const onResize = () => {
+  // bei Resize neu zentrieren (optional)
+  if (props.centerOnMount) centerNow()
   updateArrows()
-  window.addEventListener('resize', updateArrows, { passive: true })
+}
+
+onMounted(async () => {
+  await nextTick()
+  if (props.centerOnMount) centerNow()
+  updateArrows()
+  window.addEventListener('resize', onResize, { passive: true })
 })
 
-// interne/externe Links sauber behandeln
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', onResize)
+})
+
+/* Link-Helper */
 const isExternal = (url: string) => /^https?:\/\//i.test(url)
-const linkTag = (url: string) => isExternal(url) ? 'a' : 'NuxtLink'
-const nuxtLinkTo = (url: string) => isExternal(url) ? undefined : url
-const anchorHref  = (url: string) => isExternal(url) ? url : undefined
+const linkTag = (url: string) => (isExternal(url) ? 'a' : 'NuxtLink')
+const nuxtLinkTo = (url: string) => (isExternal(url) ? undefined : url)
+const anchorHref = (url: string) => (isExternal(url) ? url : undefined)
 </script>
 
 <style scoped>
+/* Scrollbar verstecken – mehrfach für Browser-Kompatibilität */
+.no-scrollbar {
+  -ms-overflow-style: none;        /* IE/Edge */
+  scrollbar-width: none;           /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar { /* Chrome/Safari */
+  display: none;
+}
 .sc-cardshelf {}
 </style>

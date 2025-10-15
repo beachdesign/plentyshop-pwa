@@ -22,7 +22,7 @@ const preset = {
       colors: {
         // sc = SmartChip
         sc: {
-          primary: '#FF0077',
+          primary: '#1f1f1f',
           ink: '#111827',
         },
       },

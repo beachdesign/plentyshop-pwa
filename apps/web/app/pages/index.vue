@@ -8,36 +8,36 @@ const supportShelf = [
   {
     eyebrow: 'APPLE SPECIALIST',
     title: 'Hol dir Beratung durch unsere Specialists. Online oder im Apple Store.',
-    href: '/de/shop/browse/overlay/store/specialist',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-specialist-help-202506?wid=960&hei=1000&fmt=p-jpg&qlt=95'
+    href: '/nagelzubehoer',
+    image: '/images/shelves/first-bonder-sm-01.png',
   },
   {
     eyebrow: 'TODAY AT APPLE',
     title: 'Apple Intelligence entdecken',
     desc: "Probier's doch einfach mal bei einer kostenlosen Session im Apple Store aus.",
-    href: 'https://www.apple.com/de/today/event/spotlight-apple-intelligence?cid=rem-de-taa-store-consumer-spotlight-ai',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-taa-202505?wid=960&hei=1000&fmt=p-jpg&qlt=95',
+    href: '/nagelzubehoer',
+    image: '/images/shelves/first-bonder-sm-02.png',
     external: true
   },
   {
     eyebrow: 'TODAY AT APPLE',
     title: 'Nimm an kostenlosen Sessions in deinem Apple Store teil.',
     desc: 'Erfahre, wie du mit deinen Apple Geräten noch mehr machen kannst.',
-    href: 'https://www.apple.com/de/today/calendar?sessions=skills&topics=daily-sessions&cid=rem-de-taa-store-fundm-cal',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-TAA-202310?wid=960&hei=1000&fmt=p-jpg&qlt=95',
+    href: '/nagelzubehoer',
+    image: '/images/shelves/first-bonder-sm-03.png',
     external: true
   },
   {
     eyebrow: 'PERSÖNLICHES SETUP',
     title: 'Richte zusammen mit unseren Specialists dein neues Gerät ein.',
     desc: 'Erhalte persönliche Beratung zur Datenübertragung, zu den neuesten Features und mehr.',
-    href: '/de/shop/browse/overlay/store/personal',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-personal-setup-202408_GEO_DE?wid=960&hei=1000&fmt=p-jpg&qlt=95'
+    href: '/nagelzubehoer',
+    image: '/images/shelves/first-bonder-sm-04.png',
   },
   {
     title: 'Erhalte Service und Support durch Expert:innen an der Genius Bar.',
-    href: '/de/shop/browse/overlay/store/genius',
-    image: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-genius-202108?wid=960&hei=1000&fmt=p-jpg&qlt=95'
+    href: '/nagelzubehoer',
+    image: '/images/shelves/first-bonder-sm-05.png',
   }
 ]
 </script>
@@ -49,16 +49,19 @@ const supportShelf = [
       <p class="mt-2 text-neutral-600">Erste statische Elemente, damit wir Look & Feel testen.</p>
     </section>
 
-    <div class="bg-sc-primary text-white p-4 rounded-lg text-center">
-  Preset-Farbe sichtbar = ✅ Theme-Config wird geladen
-</div>
-
     <ScCardShelfScroller
-      title="Wir helfen gerne."
-      subtitle="Wann und wie du möchtest."
-      :items="supportShelf"
-      card-width="50"
-    />
+  title="Wir helfen gerne YXC"
+  :items="supportShelf"
+  :offsetStart="140"
+  debug
+/>
+
+<ScCardShelfScroller
+  title="Wir helfen gerne!!!"
+  :items="supportShelf"
+  offsetStart="auto"
+  debug
+/>
 
     <section class="mx-auto max-w-7xl px-6 py-16">
       <div class="grid gap-6 sm:grid-cols-2">
