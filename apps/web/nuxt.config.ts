@@ -7,6 +7,7 @@ import { paths } from './app/utils/paths';
 import { resolve } from 'pathe';
 
 export default defineNuxtConfig({
+  extends: ['../theme-smartchip'],
   srcDir: 'app/',
   telemetry: false,
   devtools: { enabled: true },

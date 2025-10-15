@@ -1,0 +1,144 @@
+/* ----------------------------------------------------
+   0 Tailwind-Basis importieren
+   ---------------------------------------------------- */
+@tailwind base;         /* = Reset + Preflight + globale HTML/Body-Basis  */
+@tailwind components;   /* = Komponenten-Klassen (Buttons, Cards, etc.)   */
+@tailwind utilities;    /* = Alle Utility-Klassen (mt-4, bg-red-500, …)   */
+
+/* ----------------------------------------------------
+   1 Webfonts einbinden
+   ---------------------------------------------------- */
+
+/* manrope-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/manrope-v20-latin/manrope-v20-latin-200.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/fonts/manrope-v20-latin/manrope-v20-latin-200.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/manrope-v20-latin/manrope-v20-latin-300.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/fonts/manrope-v20-latin/manrope-v20-latin-300.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/manrope-v20-latin/manrope-v20-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/fonts/manrope-v20-latin/manrope-v20-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/manrope-v20-latin/manrope-v20-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/fonts/manrope-v20-latin/manrope-v20-latin-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/manrope-v20-latin/manrope-v20-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/fonts/manrope-v20-latin/manrope-v20-latin-600.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/manrope-v20-latin/manrope-v20-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/fonts/manrope-v20-latin/manrope-v20-latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/manrope-v20-latin/manrope-v20-latin-800.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/fonts/manrope-v20-latin/manrope-v20-latin-800.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* ----------------------------------------------------
+   2 @layer base  → globale Styles / Tokens
+   ---------------------------------------------------- */
+/*
+   Wird NACH @tailwind base, aber VOR components/utilities ausgeführt.
+   Hier kommen alle Design-Tokens und globalen Resets rein:
+   - globale Font-Zuweisungen
+   - Body-, HTML-, Heading-Defaults
+   - Farb- oder Background-Tokens (falls du eigene Variablen setzt)
+   - generelle typografische Basis-Regeln
+*/
+@layer base {
+  html, body, #__nuxt, main { @apply font-body; }
+  h1,h2,h3,h4,h5,h6 { @apply font-heading; }
+
+  /* Beispiel: globale Textfarbe und Hintergrund */
+  body { @apply text-orange-500 bg-pink-500; }
+
+  /* Beispiel: CI-Farbvariablen */
+  :root {
+    --sc-primary: #0ea5e9;
+    --sc-ink: #111827;
+  }
+}
+
+
+/* ----------------------------------------------------
+   3@layer components  → eigene Bausteine
+   ---------------------------------------------------- */
+/*
+   Wird NACH base, aber VOR utilities ausgeführt.
+   Hier definierst du wiederverwendbare Komponenten mit mehreren Klassen:
+   - Buttons, Badges, Cards, Overlays, Debug-Klassen
+   - komplexere Layout- oder UI-Komponenten, die kein JS brauchen
+*/
+@layer components {
+  .sc-debug-overlay::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    outline: 2px solid magenta;
+    pointer-events: none;
+    z-index: 2147483647;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-sc-primary text-white px-5 py-2.5 font-medium hover:bg-sc-primary/80;
+  }
+}
+
+
+/* ----------------------------------------------------
+   4 @layer utilities  → eigene Utility-Klassen
+   ---------------------------------------------------- */
+/*
+   Wird ganz am Ende ausgeführt, NACH allen Tailwind-Utilities.
+   Hier definierst du kleine 1-Zweck-Hilfsklassen:
+   - z. B. .text-shadow, .scroll-snap-x, .bg-glass
+   - Dinge, die du wie native Tailwind-Klassen verwenden willst
+*/
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  }
+
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+  }
+}
