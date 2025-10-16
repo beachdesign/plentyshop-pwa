@@ -4,6 +4,9 @@ import ScCardShelfScroller from '../../../theme-smartchip/components/shelves/ScC
 
 definePageMeta({ pageType: 'static' })
 
+const config = useRuntimeConfig()
+console.log('Header-Farbe:', config.public.headerBackgroundColor)
+
 const supportShelf = [
   {
     eyebrow: 'APPLE SPECIALIST',

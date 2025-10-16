@@ -15,4 +15,10 @@ export default defineNuxtConfig({
   nitro: {
     publicAssets: [{ dir: resolve('./public') }],
   },
+  runtimeConfig: {
+    public: {
+      headerBackgroundColor:
+        process.env.NUXT_PUBLIC_HEADER_BACKGROUND_COLOR || process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#FF0000', // Smart Chip Config
+    },
+  },
 })
