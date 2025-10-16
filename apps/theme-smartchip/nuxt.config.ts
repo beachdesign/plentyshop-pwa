@@ -17,8 +17,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      headerBackgroundColor:
-        process.env.NUXT_PUBLIC_HEADER_BACKGROUND_COLOR || process.env.NUXT_PUBLIC_PRIMARY_COLOR || '#FF0000', // Smart Chip Config
+      headerBackgroundColor: '#FF0000', // Smart Chip Config
     },
   },
 })
