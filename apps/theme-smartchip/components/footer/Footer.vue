@@ -1,116 +1,80 @@
 <template>
-  <footer
-    v-if="resolvedContent"
-    class="pt-10"
-    :style="{
-      backgroundColor: resolvedContent.colors?.background || FOOTER_COLORS.background,
-      color: resolvedContent.colors?.text || FOOTER_COLORS.text,
-    }"
-    data-testid="footer"
-  > WTF JUNGE
-    <div class="px-4 md:px-6 pb-10 max-w-screen-3xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <div class="max-w-[280px] break-words">
-          <div class="ml-4 text-lg font-medium leading-7">
-            {{ resolvedContent.column1?.title }}
-          </div>
-          <ul>
-            <SfListItem
-              v-for="({ key: subcategoryKey, link }, idx) in categories[0]?.subcategories || []"
-              :key="subcategoryKey || idx"
-              class="py-2 !bg-transparent typography-text-sm"
-            >
-              <SfLink
-                :tag="NuxtLink"
-                :style="{ color: resolvedContent.colors?.text || undefined }"
-                class="no-underline text-neutral-600 hover:underline active:underline"
-                variant="secondary"
-                :to="localePath(link)"
-              >
-                {{ t(`categories.${categories[0]?.key}.subcategories.${subcategoryKey}`) }}
-              </SfLink>
-            </SfListItem>
-          </ul>
-        </div>
+  <footer class="bg-neutral-900 text-white" data-theme="smartchip">
+    <!-- Top: 4-Spalten Shop-Navigation + App-Store -->
+    <div class="mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-4">
+      <nav aria-labelledby="footer-shop" class="space-y-3">
+        <h3 id="footer-shop" class="text-sm font-semibold tracking-wide text-white/90">Shop</h3>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><NuxtLink to="/produkte" class="hover:text-white">Alle Produkte</NuxtLink></li>
+          <li><NuxtLink to="/neu" class="hover:text-white">Neuheiten</NuxtLink></li>
+          <li><NuxtLink to="/angebote" class="hover:text-white">Angebote</NuxtLink></li>
+          <li><NuxtLink to="/zubehoer" class="hover:text-white">Zubehör</NuxtLink></li>
+        </ul>
+      </nav>
 
-        <div
-          v-for="(column, i) in [resolvedContent.column2, resolvedContent.column3, resolvedContent.column4]"
-          :key="i"
-          class="max-w-[280px] break-words"
-        >
-          <div class="ml-4 text-lg font-medium leading-7">
-            {{ column?.title }}
-          </div>
-          <div v-if="column?.showContactLink" class="text-sm">
-            <ul>
-              <li
-                class="inline-flex items-center gap-2 w-full hover:bg-neutral-100 active:bg-neutral-200 cursor-pointer focus-visible:outline focus-visible:outline-offset focus-visible:relative focus-visible:z-10 px-4 py-2 !bg-transparent typography-text-sm"
-              >
-                <SfLink
-                  :style="{ color: resolvedContent.colors?.text || '#1c1c1c' }"
-                  :tag="NuxtLink"
-                  class="no-underline text-neutral-900 hover:cursor-pointer hover:underline active:underline"
-                  variant="secondary"
-                  :to="localePath('/contact')"
-                >
-                  {{ t('categories.contact.label') }}
-                </SfLink>
-              </li>
-            </ul>
-          </div>
-          <div
-            v-if="column?.description"
-            class="custom-html ml-4 text-sm hover:cursor-pointer"
-            v-html="column.description"
-          />
+      <nav aria-labelledby="footer-service" class="space-y-3">
+        <h3 id="footer-service" class="text-sm font-semibold tracking-wide text-white/90">Service</h3>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><NuxtLink to="/versand" class="hover:text-white">Versand & Lieferung</NuxtLink></li>
+          <li><NuxtLink to="/retoure" class="hover:text-white">Retoure & Erstattung</NuxtLink></li>
+          <li><NuxtLink to="/garantie" class="hover:text-white">Garantie</NuxtLink></li>
+          <li><NuxtLink to="/hilfe" class="hover:text-white">Hilfe & Kontakt</NuxtLink></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-info" class="space-y-3">
+        <h3 id="footer-info" class="text-sm font-semibold tracking-wide text-white/90">Informationen</h3>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><NuxtLink to="/ueber-uns" class="hover:text-white">Über uns</NuxtLink></li>
+          <li><NuxtLink to="/karriere" class="hover:text-white">Karriere</NuxtLink></li>
+          <li><NuxtLink to="/newsletter" class="hover:text-white">Newsletter</NuxtLink></li>
+          <li><NuxtLink to="/fachhaendler" class="hover:text-white">Fachhändler</NuxtLink></li>
+        </ul>
+      </nav>
+
+      <section aria-labelledby="footer-apps" class="space-y-3">
+        <h3 id="footer-apps" class="text-sm font-semibold tracking-wide text-white/90">App herunterladen</h3>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a v-if="iosUrl" :href="iosUrl" target="_blank" rel="noopener" class="inline-block">
+            <img src="/badges/app-store.svg" alt="App Store" class="h-10 w-auto"/>
+          </a>
+          <a v-if="androidUrl" :href="androidUrl" target="_blank" rel="noopener" class="inline-block">
+            <img src="/badges/google-play.svg" alt="Google Play" class="h-10 w-auto"/>
+          </a>
         </div>
-      </div>
+      </section>
     </div>
-    <div>
-      <div
-        v-if="resolvedContent.footnote && resolvedContent.footnote.trim() !== ''"
-        class="text-sm py-10 md:py-6 px-10"
-        :class="{
-          'text-left': resolvedContent.footnoteAlign === 'left',
-          'text-center': resolvedContent.footnoteAlign === 'center',
-          'text-right': resolvedContent.footnoteAlign === 'right',
-        }"
-        :style="{
-          color: resolvedContent.colors?.footnoteText || FOOTER_COLORS.footnoteText,
-          backgroundColor: resolvedContent.colors?.footnoteBackground || FOOTER_COLORS.footnoteBackground,
-        }"
-        v-html="resolvedContent.footnote"
-      />
+
+    <div class="border-t border-white/10"></div>
+
+    <div class="mx-auto max-w-7xl px-6 py-6 flex flex-col md:flex-row items-center gap-3 md:gap-6">
+      <p class="text-xs text-white/60">&copy; {{ storeName }} {{ year }}</p>
+      <ul class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-white/60">
+        <li><NuxtLink to="/impressum" class="hover:text-white">Impressum</NuxtLink></li>
+        <li><NuxtLink to="/datenschutz" class="hover:text-white">Datenschutz</NuxtLink></li>
+        <li><NuxtLink to="/agb" class="hover:text-white">AGB</NuxtLink></li>
+        <li><NuxtLink to="/widerruf" class="hover:text-white">Widerruf</NuxtLink></li>
+      </ul>
+      <div class="ms-auto flex items-center gap-2 text-xs text-white/50">
+        <span class="inline-block h-1 w-1 rounded-full bg-white/30"></span>
+        <span>Made with WTF</span>
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import { SfLink, SfListItem } from '@storefront-ui/vue';
-import type { FooterProps } from './types';
-import { categories } from '~/mocks';
-const { t } = useI18n();
-const props = defineProps<FooterProps>();
-const localePath = useLocalePath();
-const NuxtLink = resolveComponent('NuxtLink');
-
-const FOOTER_COLORS = {
-  background: '#cfe4ec',
-  text: '#1c1c1c',
-  footnoteBackground: '#161a16',
-  footnoteText: '#959795',
-};
-
-const { getFooterSettings } = useFooter();
-const resolvedContent = computed(() => props.content ?? getFooterSettings());
+const cfg = useRuntimeConfig().public as {
+  storename?: string
+  iosStoreUrl?: string
+  androidStoreUrl?: string
+}
+const storeName  = cfg.storename || 'SmartChip'
+const iosUrl     = cfg.iosStoreUrl || ''
+const androidUrl = cfg.androidStoreUrl || ''
+const year       = new Date().getFullYear()
 </script>
 
 <style scoped>
-::v-deep(.custom-html li) {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-::v-deep(.custom-html li:hover) {
-  text-decoration: underline;
-}
+/* optional: a:hover { text-decoration: underline; } */
 </style>

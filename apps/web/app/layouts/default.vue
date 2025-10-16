@@ -1,5 +1,5 @@
 <template>
-  <div class="font-body">
+  <div>
     <UiHeader />
     <NarrowContainer v-if="breadcrumbs?.length" class="p-4 md:px-0">
       <LazyUiBreadcrumbs :breadcrumbs="breadcrumbs" />
@@ -11,7 +11,8 @@
     <Cookiebar />
     <PreviewMode />
     <ClientOnly>
-      <FooterBlock v-if="!route.meta.isBlockified" />
+      <!-- <FooterBlock v-if="!route.meta.isBlockified" /> -->
+       <Footer v-if="!route.meta.isBlockified" />
     </ClientOnly>
     <QuickCheckout v-if="isOpen" :product="product" />
   </div>
@@ -19,7 +20,7 @@
 
 <script setup lang="ts">
 import type { DefaultLayoutProps } from '~/layouts/types';
-import FooterBlock from '~/components/blocks/Footer/Footer.vue';
+// import FooterBlock from '~/components/blocks/Footer/Footer.vue';
 
 defineProps<DefaultLayoutProps>();
 
