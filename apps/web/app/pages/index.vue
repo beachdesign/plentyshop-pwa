@@ -13,14 +13,14 @@ const supportShelf = [
     eyebrow: 'APPLE SPECIALIST',
     title: 'Hol dir Beratung durch unsere Specialists. Online oder im Apple Store.',
     href: '/nagelzubehoer',
-    image: '/images/shelves/first-bonder-sm-01.png',
+    image: '/images/shelves/first-bonder-sm-01.webp',
   },
   {
     eyebrow: 'TODAY AT APPLE',
     title: 'Apple Intelligence entdecken',
     desc: "Probier's doch einfach mal bei einer kostenlosen Session im Apple Store aus.",
     href: '/nagelzubehoer',
-    image: '/images/shelves/first-bonder-sm-02.png',
+    image: '/images/shelves/first-bonder-sm-02.webp',
     external: true
   },
   {
@@ -28,7 +28,7 @@ const supportShelf = [
     title: 'Nimm an kostenlosen Sessions in deinem Apple Store teil.',
     desc: 'Erfahre, wie du mit deinen Apple Geräten noch mehr machen kannst.',
     href: '/nagelzubehoer',
-    image: '/images/shelves/first-bonder-sm-03.png',
+    image: '/images/shelves/first-bonder-sm-03.webp',
     external: true
   },
   {
@@ -36,12 +36,12 @@ const supportShelf = [
     title: 'Richte zusammen mit unseren Specialists dein neues Gerät ein.',
     desc: 'Erhalte persönliche Beratung zur Datenübertragung, zu den neuesten Features und mehr.',
     href: '/nagelzubehoer',
-    image: '/images/shelves/first-bonder-sm-04.png',
+    image: '/images/shelves/first-bonder-sm-04.webp',
   },
   {
     title: 'Erhalte Service und Support durch Expert:innen an der Genius Bar.',
     href: '/nagelzubehoer',
-    image: '/images/shelves/first-bonder-sm-05.png',
+    image: '/images/shelves/first-bonder-sm-05.webp',
   }
 ]
 </script>
