@@ -1,6 +1,6 @@
 <template>
   <NarrowContainer class="mb-20 px-4 md:px-0" data-testid="category-layout">
-    <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2">WTF {{ title }} WTF JUNGE</h1>
+    <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2 LOL">WTF {{ title }} WTF JUNGE</h1>
     <div class="md:flex gap-6" data-testid="category-page-content">
       <div class="flex-1">
         <div class="flex justify-between items-center mb-6">
@@ -50,12 +50,13 @@
               :unit-name="productGetters.getUnitName(product)"
               :show-base-price="productGetters.showPricePerUnit(product)"
             />
+            EYYYYYY
           </NuxtLazyHydrate>
         </section>
         <LazyCategoryEmptyState v-else />
         <div v-if="totalProducts > 0" class="mt-4 mb-4 typography-text-xs flex gap-1">
-          <span>{{ t('asterisk') }}</span>
-          <span v-if="showNetPrices">{{ t('itemExclVAT') }}</span>
+          <span>{{ t('asterisk') }} EYYYY</span>
+          <span v-if="showNetPrices">{{ t('itemExclVAT') }} WAS IST DENN </span>
           <span v-else>{{ t('itemInclVAT') }}</span>
           <i18n-t keypath="excludedShipping" scope="global">
             <template #shipping>
