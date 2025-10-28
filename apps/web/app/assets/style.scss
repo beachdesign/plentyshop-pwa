@@ -101,3 +101,11 @@ apple-pay-button {
 header form[role="search"] {
   display: none;
 }
+
+div[data-testid="category-page-content"] aside[data-testid="category-sidebar"] {
+  display: none;
+}
+
+header>div>nav>ul {
+  display: none;
+}
