@@ -110,19 +110,9 @@ div[data-testid="category-page-content"] aside[data-testid="category-sidebar"] {
   display: none;
 }
 
-// Ersten Div-Container im Header ausblenden (Navigation)
-header:has(> div > nav > ul) > div:first-of-type {
+// Navigationsmenü im Header ausblenden
+header>div>nav>ul {
   display: none;
-}
-
-// Hintergrundfarbe des schmalen Containers anpassen
-div[data-testid="narrow-container"] {
-  background-color: #f6f6f6;
-}
-
-// Hintergrundfarbe des schmalen Containers anpassen
-div[data-testid="narrow-container"] {
-  background-color: #f6f6f6;
 }
 
 // Hintergrundfarbe des schmalen Containers anpassen
