@@ -99,14 +99,38 @@ apple-pay-button {
 }
 
 /* SMARTCHIP Anpassungen */
+
+// Suchfeld im Header ausblenden
 header form[role="search"] {
   display: none;
 }
 
+// Seitenleiste auf Kategorieseiten ausblenden
 div[data-testid="category-page-content"] aside[data-testid="category-sidebar"] {
   display: none;
 }
 
-header>div>nav>ul {
+// Ersten Div-Container im Header ausblenden (Navigation)
+header:has(> div > nav > ul) > div:first-of-type {
   display: none;
+}
+
+// Hintergrundfarbe des schmalen Containers anpassen
+div[data-testid="narrow-container"] {
+  background-color: #f6f6f6;
+}
+
+// Hintergrundfarbe des schmalen Containers anpassen
+div[data-testid="narrow-container"] {
+  background-color: #f6f6f6;
+}
+
+// Hintergrundfarbe des schmalen Containers anpassen
+main {
+  background-color: #f6f6f6;
+}
+
+//  Produktkarten-Hintergrundfarbe anpassen
+div[data-testid="product-card"] {
+  background-color: #ffffff;
 }
