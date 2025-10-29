@@ -1,110 +1,116 @@
-<template>
-  <section
-    class="relative pt-14 pb-20 bg-white"
-    role="region"
-    :aria-labelledby="sectionId + '-title'"
-  >
-    <div class="mx-auto max-w-7xl px-6 relative">
-      <div ref="rootEl" class="grid md:grid-cols-12 gap-8 md:gap-20 items-center">
-        <!-- Video rechts auf Desktop -->
-        <div class="md:col-span-7 order-1 md:order-2">
-          <div class="relative pb-[100%] rounded-xl overflow-hidden shadow-lg">
-            <video
-              class="absolute inset-0 h-full w-full object-cover"
-              :poster="poster || undefined"
-              :autoplay="true"
-              playsinline
-              loop
-              muted
-            >
-              <source :src="videoSrc" type="video/mp4" />
-              Dein Browser unterstützt kein HTML5 Video.
-            </video>
-          </div>
-        </div>
-
-        <!-- Copy links auf Desktop -->
-        <div class="md:col-span-5 order-2 md:order-1">
-          <h1
-            :id="sectionId + '-title'"
-            class="text-4xl md:text-7xl font-bold leading-[1.1] text-gray-900 transition-all duration-500"
-            :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-          >
-            {{ title }}
-          </h1>
-
-          <div class="mt-4 space-y-4 text-gray-600 text-base md:text-lg">
-            <p
-              class="transition-all duration-500 delay-100"
-              :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            >
-              {{ text }}
-            </p>
-          </div>
-
-          <div class="mt-8">
-            <NuxtLink
-              :to="ctaHref"
-              class="inline-flex items-center justify-center px-5 py-3 font-semibold rounded-md bg-gray-900 text-white hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 transition"
-              :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            >
-              {{ ctaLabel }}
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-
-/** Props – alles optional, hat Default-Werte wie in deinem Snippet */
 const props = withDefaults(defineProps<{
-  sectionId?: string
-  title?: string
+  id?: string
+  title: string
   text?: string
   ctaLabel?: string
   ctaHref?: string
   videoSrc: string
   poster?: string
+  contained?: boolean
+  videoOn?: 'left' | 'right'
+  background?: string
+  ratio?: '16/9' | '4/3' | '1/1' | '3/2'
+  debug?: boolean            // 👈 NEU: Debug-Overlay/Farben
 }>(), {
-  sectionId: 'section-hero-video',
-  title: 'Möchtest du deinen Kunden den Smart Chip anbieten?',
-  text:
-    'Smart Chip ist ein digitales Portemonnaie auf deinem Fingernagel. Winzig klein. Unmöglich zu verlieren. Niemand kann es dir stehlen, und zu Hause vergessen kannst du es auch nicht. Es ist immer bei dir – egal wo.',
+  id: 'section-hero-video',
+  text: '',
   ctaLabel: 'Jetzt registrieren',
   ctaHref: '#register',
   poster: '',
+  contained: true,
+  videoOn: 'right',
+  background: 'bg-white',
+  ratio: '16/9',
+  debug: true,               // zum Start EIN – danach kannst du auf false setzen
 })
 
-const shown = ref(false)
-const rootEl = ref<HTMLElement | null>(null)
-let io: IntersectionObserver | null = null
-
-onMounted(() => {
-  if (!rootEl.value) return
-  io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          shown.value = true
-          io?.disconnect()
-          io = null
-        }
-      })
-    },
-    { rootMargin: '0px 0px -10% 0px' }
-  )
-  io.observe(rootEl.value)
-})
-
-onBeforeUnmount(() => {
-  io?.disconnect()
-  io = null
-})
-
-const sectionId = props.sectionId // alias für Template
-const { title, text, ctaLabel, ctaHref, videoSrc, poster } = props
+const ratioClass = {
+  '16/9': 'pt-[56.25%]',
+  '4/3' : 'pt-[75%]',
+  '1/1' : 'pt-[100%]',
+  '3/2' : 'pt-[66.6667%]',
+}[props.ratio || '16/9']
 </script>
+
+<template>
+  <!-- EINZIGER Wrapper -->
+  <section :id="id" class="relative pt-14 pb-20" :class="background" :aria-labelledby="`${id}-title`">
+    <!-- Container -->
+    <div :class="[contained ? 'mx-auto max-w-7xl px-6' : 'w-full px-6', 'relative']"
+         :style="debug ? 'outline:2px dashed #ff00cc; outline-offset:6px;' : ''">
+
+      <!-- Grid 12 -->
+      <div class="grid md:grid-cols-12 gap-8 md:gap-20 items-center"
+           :class="debug ? 'bg-[rgba(0,255,255,.08)]' : ''">
+        <!-- VIDEO -->
+        <div
+          :class="[
+            videoOn === 'right' ? 'order-1 md:order-2' : 'order-1',
+            'md:col-span-7',
+            debug ? 'bg-[rgba(0,128,255,.12)] p-1 md:p-2 rounded' : ''
+          ]"
+        >
+          <div class="relative rounded-xl overflow-hidden shadow-lg"
+               :class="debug ? 'ring-2 ring-blue-400/50' : ''">
+            <div :class="['relative', ratioClass]">
+              <video
+                class="absolute inset-0 h-full w-full object-cover"
+                :poster="poster || undefined"
+                :src="videoSrc"
+                autoplay
+                muted
+                playsinline
+                loop
+              />
+            </div>
+          </div>
+
+          <!-- Label -->
+          <div v-if="debug" class="mt-2 text-xs font-mono text-blue-800">
+            VIDEO col-span-7 • order: {{ videoOn === 'right' ? 'md:2' : 'md:1' }} • ratio: {{ ratio }}
+          </div>
+        </div>
+
+        <!-- COPY -->
+        <div
+          :class="[
+            videoOn === 'right' ? 'order-2 md:order-1' : 'order-2',
+            'md:col-span-5',
+            debug ? 'bg-[rgba(255,128,0,.12)] p-1 md:p-2 rounded' : ''
+          ]"
+        >
+          <h1 :id="`${id}-title`"
+              class="text-4xl md:text-7xl font-bold leading-[1.1] text-gray-900">
+            {{ title }}
+          </h1>
+          <p v-if="text" class="mt-4 text-base md:text-lg text-gray-600">
+            {{ text }}
+          </p>
+          <div class="mt-8">
+            <a :href="ctaHref"
+               class="inline-flex items-center justify-center px-5 py-3 font-semibold rounded-md
+                      bg-gray-900 text-white hover:bg-amber-400 focus:outline-none focus:ring-2
+                      focus:ring-offset-2 focus:ring-indigo-600 transition">
+              {{ ctaLabel }}
+            </a>
+          </div>
+
+          <!-- Label -->
+          <div v-if="debug" class="mt-2 text-xs font-mono text-orange-800">
+            COPY col-span-5 • order: {{ videoOn === 'right' ? 'md:1' : 'md:2' }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Debug-Info: Containerbreite etc. -->
+      <div v-if="debug" class="mt-3 text-xs font-mono text-neutral-700">
+        container: {{ contained ? 'max-w-7xl px-6' : 'full width' }} • bg: {{ background }} • videoOn: {{ videoOn }}
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+/* nichts – alles Tailwind */
+</style>
