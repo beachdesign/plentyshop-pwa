@@ -100,22 +100,27 @@ apple-pay-button {
 
 /* SMARTCHIP Anpassungen */
 
-// Suchfeld im Header ausblenden
+/* Suchfeld im Header ausblenden */
 header form[role="search"] {
   display: none;
 }
 
-// Hintergrundfarbe des Default-Layouts anpassen
+/* Hintergrundfarbe des Default-Layouts anpassen */
 .sc-bg-gray {
   background-color: #f6f6f6;
 }
 
-// ProductCard Styling
+/* CategoryPage Grid Anpassung */
+.sc-category-page-grid {
+  @apply grid grid-cols-1 2xs:grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 mb-10 md:mb-5;
+}
+
+/* ProductCard Styling */
 .sc-product-card {
   @apply bg-white rounded-lg hover:shadow-lg flex flex-col;
 }
 
-// PurchaseCard Styling Produktseite
+/* PurchaseCard Styling Produktseite */
 .sc-purchase-card {
   @apply bg-white md:border md:border-neutral-100 md:shadow-lg md:rounded-lg md:sticky md:top-40;
 }
