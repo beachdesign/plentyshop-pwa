@@ -7,7 +7,7 @@
         <section class="grid-in-left-top md:h-full xl:max-h-[700px]">
           <Gallery :images="addModernImageExtensionForGallery(productGetters.getGallery(product))" />
         </section>
-        <section class="sc-purchase-card mb-10 grid-in-right md:mb-0">
+        <section class="mb-10 grid-in-right md:mb-0">
           <UiPurchaseCard v-if="product" :product="product" :review-average="countsProductReviews" />
         </section>
         <section class="grid-in-left-bottom md:mt-8">

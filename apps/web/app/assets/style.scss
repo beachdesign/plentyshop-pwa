@@ -115,12 +115,22 @@ header>div>nav>ul {
   display: none;
 }
 
-// Hintergrundfarbe des schmalen Containers anpassen
-main {
-  background-color: #f6f6f6;
-}
-
 //  Produktkarten-Hintergrundfarbe anpassen
 div[data-testid="product-card"] {
   background-color: #ffffff;
+}
+
+// Hintergrundfarbe des Default-Layouts anpassen
+.sc-bg-gray {
+  background-color: #f6f6f6;
+}
+
+// ProductCard Styling
+.sc-product-card {
+  @apply bg-white rounded-ml hover:shadow-lg flex flex-col;
+}
+
+// PurchaseCard Styling Produktseite
+.sc-purchase-card {
+  @apply bg-white md:border md:border-neutral-100 md:shadow-lg md:rounded-lg md:sticky md:top-40;
 }
