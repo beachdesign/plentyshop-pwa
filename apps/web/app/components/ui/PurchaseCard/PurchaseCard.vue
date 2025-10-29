@@ -1,6 +1,6 @@
 <template>
   <form
-    class="md:border md:border-neutral-100 md:shadow-lg md:rounded-md md:sticky md:top-40"
+    class="bg-white md:border md:border-neutral-100 md:shadow-lg md:rounded-lg md:sticky md:top-40"
     data-testid="purchase-card"
     @submit.prevent="handleAddToCart()"
   >
