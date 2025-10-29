@@ -6,7 +6,7 @@
         :src="headerLogo"
         :alt="`${storeName} logo`"
         class="w-100 py-2"
-        width="150"
+        width="80"
         height="40"
         preload
       />
