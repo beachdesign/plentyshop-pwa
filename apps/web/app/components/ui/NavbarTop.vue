@@ -14,6 +14,7 @@
       <NuxtLink :to="localePath(paths.home)" aria-label="Sf Homepage" class="h-6 md:h-7 -mt-1.5">
         <UiLogo />
       </NuxtLink>
+      <h1>Storefront WTF</h1>
       <slot />
     </div>
   </header>
