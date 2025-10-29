@@ -15,11 +15,6 @@
           <NuxtLazyHydrate when-visible>
             <ProductAccordion v-if="product" :product="product" />
           </NuxtLazyHydrate>
-          <ReviewsAccordion
-            v-if="product"
-            :product="product"
-            :total-reviews="reviewGetters.getTotalReviews(countsProductReviews)"
-          />
 
           <div class="p-4 flex">
             <p class="font-bold leading-6 cursor-pointer" data-testid="open-manufacturer-drawer" @click="openDrawer()">
