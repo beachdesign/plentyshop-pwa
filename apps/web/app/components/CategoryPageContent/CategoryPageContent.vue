@@ -2,7 +2,6 @@
   <NarrowContainer class="mb-20 px-4 md:px-0" data-testid="category-layout">
     <h1 class="my-10 font-bold typography-headline-3 md:typography-headline-2">{{ title }}</h1>
     <div class="md:flex gap-6" data-testid="category-page-content">
-      <!-- CategorySidebar gelöscht -->
       <div class="flex-1">
         <div class="flex justify-between items-center mb-6">
           <span class="font-bold md:text-lg">
