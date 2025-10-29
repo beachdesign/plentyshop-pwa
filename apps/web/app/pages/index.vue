@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Startseite WTF</h1>
     <EditablePage :identifier="'index'" :type="'immutable'" />
   </div>
 </template>
