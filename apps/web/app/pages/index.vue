@@ -1,6 +1,20 @@
 <template>
   <div>
     <h1>Startseite WTF</h1>
+    
+    <template>
+      <ScHeroVideo
+        video-src="https://nailconnect.smart-chip.com/videos/payment-pool-topdown.mp4"
+        poster=""
+        title="Möchtest du deinen Kunden den Smart Chip anbieten?"
+        text="Smart Chip ist ein digitales Portemonnaie auf deinem Fingernagel. Winzig klein…"
+        cta-label="Jetzt registrieren"
+        cta-href="#register"
+      />
+    </template>
+
+     <h1>Startseite WTF</h1>
+
     <EditablePage :identifier="'index'" :type="'immutable'" />
   </div>
 </template>
