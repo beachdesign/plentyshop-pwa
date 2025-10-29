@@ -105,16 +105,6 @@ header form[role="search"] {
   display: none;
 }
 
-// Seitenleiste auf Kategorieseiten ausblenden
-div[data-testid="category-page-content"] aside[data-testid="category-sidebar"] {
-  display: none;
-}
-
-// Navigationsmenü im Header ausblenden
-header>div>nav>ul {
-  display: none;
-}
-
 // Hintergrundfarbe des Default-Layouts anpassen
 .sc-bg-gray {
   background-color: #f6f6f6;

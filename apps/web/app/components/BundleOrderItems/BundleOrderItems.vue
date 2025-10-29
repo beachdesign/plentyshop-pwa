@@ -2,7 +2,7 @@
   <div v-if="product.bundleComponents" class="border-t-2 my-2" data-testid="bundle-components-list">
     <div v-for="(item, index) in product.bundleComponents" :key="index" class="border-b-2 flex py-2">
       
-      // Verlinkung BundleItems in PurchaseCard entfernt
+      /* Verlinkung BundleItems in PurchaseCard entfernt */
 
       <NuxtImg
         ref="image"
