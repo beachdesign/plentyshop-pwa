@@ -5,14 +5,14 @@
       data-testid="section-top"
     >
       <div v-for="{ key, subcategories } in categories" :key="key" class="min-w-[25%] xs:min-w-[50%] flex flex-col">
-        <div class="ml-4 text-lg font-medium leading-7 text-neutral-900">
+        <div class="sc-footer-col">
           {{ t(`categories.${key}.label`) }}
         </div>
         <ul>
           <SfListItem
             v-for="{ key: subcategoryKey, link } in subcategories"
             :key="subcategoryKey"
-            class="py-2 !bg-transparent typography-text-sm"
+            class="sc-footer-list-item"
           >
             <SfLink
               :tag="NuxtLink"
@@ -28,7 +28,7 @@
     </div>
     <hr />
     <div class="bg-neutral-900" data-testid="section-bottom">
-      <div class="text-sm py-10 md:py-6 px-10 text-right">
+      <div class="text-sm py-10 md:py-6 px-10 text-right max-w-screen-3xl mx-auto">
         <p class="text-white/50">
           {{ companyName }}
         </p>

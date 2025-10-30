@@ -129,3 +129,11 @@ header form[role="search"] {
 .sc-purchase-card {
   @apply bg-white md:border md:border-neutral-100 md:shadow-lg md:rounded-lg md:sticky md:top-40;
 }
+
+/* Footer Anpassungen */
+.sc-footer-col {
+  @apply ml-4 mb-4 text-lg font-bold leading-7 text-neutral-900;
+}
+.sc-footer-list-item {
+  @apply py-1.5 !bg-transparent typography-text-sm;
+}
