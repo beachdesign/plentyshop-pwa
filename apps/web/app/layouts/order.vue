@@ -1,6 +1,6 @@
 <template>
   <UiNavbarTop />
-  <main>
+  <main class="sc-bg-gray">
     <NarrowContainer>
       <slot />
     </NarrowContainer>
