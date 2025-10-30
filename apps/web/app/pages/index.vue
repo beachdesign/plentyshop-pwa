@@ -2,7 +2,6 @@
   <div>
     <h1>Startseite WTF</h1>
     
-    <template>
       <ScHeroVideo
         title="Möchtest du deinen Kunden den Smart Chip anbieten?"
         text="Smart Chip ist ein ultradünner NFC-Sticker – blitzschnell, robust, immer dabei."
@@ -15,7 +14,6 @@
         ratio="1/1"
         :debug="true"
       />
-    </template>
 
      <h1>Startseite WTF</h1>
 

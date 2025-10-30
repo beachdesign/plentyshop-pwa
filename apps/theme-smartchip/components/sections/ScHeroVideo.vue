@@ -47,7 +47,7 @@ const ratioClass = {
         <div
           :class="[
             videoOn === 'right' ? 'order-1 md:order-2' : 'order-1',
-            'md:col-span-7',
+            'col-span-7',
             debug ? 'bg-[rgba(0,128,255,.12)] p-1 md:p-2 rounded' : ''
           ]"
         >
