@@ -87,7 +87,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label>
             <UiFormLabel>
-              {{ hasCompany ? t('form.firstNameLabel') : `${t('form.firstNameLabel')} ${t('form.required')}` }}
+              {{ t('form.firstNameLabel') }}
             </UiFormLabel>
             <SfInput
               v-model="formFields.firstName.value"
@@ -101,7 +101,7 @@
 
           <label>
             <UiFormLabel>
-              {{ hasCompany ? t('form.lastNameLabel') : `${t('form.lastNameLabel')} ${t('form.required')}` }}
+              {{ t('form.lastNameLabel') }}
             </UiFormLabel>
             <SfInput
               v-model="formFields.lastName.value"
@@ -114,21 +114,7 @@
           </label>
         </div>
 
-        <div class="grid grid-cols-1">
-          <SfLink
-            class="select-none hover:cursor-pointer"
-            role="button"
-            tabindex="0"
-            :aria-pressed="hasCompany"
-            :aria-label="!hasCompany ? t('form.addCompany') : t('form.removeCompany')"
-            @click="hasCompany = !hasCompany"
-            @keydown.enter.space="hasCompany = !hasCompany"
-          >
-            {{ !hasCompany ? t('form.addCompany') : t('form.removeCompany') }}
-          </SfLink>
-        </div>
-
-        <div v-if="hasCompany" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label for="companyName">
             <UiFormLabel for="companyName">{{ t('form.companyLabel') }} {{ t('form.required') }}</UiFormLabel>
             <SfInput
