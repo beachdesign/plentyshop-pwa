@@ -5,12 +5,10 @@
     <div class="mx-auto max-w-7xl px-6 relative">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center">
         <!-- VIDEO -->
-        <div
-          :class="{
+        <div :class="{
             'order-1 md:order-2': videoOn === 'right',
             'order-1': videoOn !== 'right',
-          }"
-        >
+          }">
           <div class="relative rounded-xl overflow-hidden shadow-lg">
             <div class="relative pb-[100%] rounded-xl overflow-hidden shadow-lg">
               <video
@@ -22,11 +20,9 @@
                 loop>
                 <source :src="videoSrc" type="video/mp4" />
               </video>
-              <img src="https://nailconnect.smart-chip.com/images/landing/woman-getting-treatment_Copper.webp" />
             </div>
           </div>
         </div>
-
         <!-- COPY -->
         <div
           :class="{
