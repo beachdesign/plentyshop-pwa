@@ -16,7 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-  import ScHeroVideo from '../../../theme-smartchip/components/sections/ScHeroVideo.vue' // Beispiel: so hast du das Shelf importiert
   definePageMeta({
     pageType: 'static',
     isBlockified: true,
