@@ -6,51 +6,78 @@
         <div class="text-lg text-gray-600 mb-6">{{ t('auth.signup.subheading') }}</div>
       </div>
 
-      <form novalidate
+      <form
+        novalidate
         class="max-w-2xl mx-auto bg-white rounded-lg md:shadow-sm md:border md:border-gray-100 md:p-6 lg:p-8 space-y-4 mb-8"
-        @submit.prevent="onSubmit">
+        @submit.prevent="onSubmit"
+      >
         <label class="w-full">
           <UiFormLabel>{{ t('form.emailLabel') }} {{ t('form.required') }}</UiFormLabel>
-          <SfInput v-model="formFields.email.value" v-bind="formFieldsAttributes.email" :invalid="!!errors['email']"
-            name="customerEmail" type="email" autocomplete="email" />
+          <SfInput
+            v-model="formFields.email.value"
+            v-bind="formFieldsAttributes.email"
+            :invalid="!!errors['email']"
+            name="customerEmail"
+            type="email"
+            autocomplete="email"
+          />
           <ErrorMessage as="span" name="email" class="flex text-negative-700 text-sm mt-2" />
         </label>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label>
             <UiFormLabel>{{ t('form.passwordLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <UiFormPasswordInput v-model="formFields.password.value" :title="t('invalidPassword')" name="password"
-              autocomplete="current-password" v-bind="formFieldsAttributes.password" :invalid="!!errors['password']"
-              @input="stripSpaces('password')" />
+            <UiFormPasswordInput
+              v-model="formFields.password.value"
+              :title="t('invalidPassword')"
+              name="password"
+              autocomplete="current-password"
+              v-bind="formFieldsAttributes.password"
+              :invalid="!!errors['password']"
+              @input="stripSpaces('password')"
+            />
             <ErrorMessage as="span" name="password" class="flex text-negative-700 text-sm mt-2" />
           </label>
 
           <label>
             <UiFormLabel>{{ t('form.repeatPasswordLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <UiFormPasswordInput v-model="formFields.repeatPassword.value" :title="t('invalidPassword')" name="password"
-              autocomplete="current-password" v-bind="formFieldsAttributes.repeatPassword"
-              :invalid="!!errors['repeatPassword']" @input="stripSpaces('repeatPassword')" />
+            <UiFormPasswordInput
+              v-model="formFields.repeatPassword.value"
+              :title="t('invalidPassword')"
+              name="password"
+              autocomplete="current-password"
+              v-bind="formFieldsAttributes.repeatPassword"
+              :invalid="!!errors['repeatPassword']"
+              @input="stripSpaces('repeatPassword')"
+            />
             <ErrorMessage as="span" name="repeatPassword" class="flex text-negative-700 text-sm mt-2" />
           </label>
         </div>
 
         <div class="select-none bg-gray-50 p-4 rounded-lg my-4 space-y-1 text-xs">
-          <div class="flex items-center"
-            :class="{ 'text-green-600': passwordValidationLength, 'text-gray-500': !passwordValidationLength }">
+          <div
+            class="flex items-center"
+            :class="{ 'text-green-600': passwordValidationLength, 'text-gray-500': !passwordValidationLength }"
+          >
             <SfIconCheck v-if="passwordValidationLength" size="sm" class="mr-2" />
             <SfIconClose v-else size="sm" class="mr-2" />
             {{ t('auth.signup.passwordValidation.characters', { min: passwordMinLength, max: passwordMaxLength }) }}
           </div>
-          <div class="flex items-center"
-            :class="{ 'text-green-600': passwordValidationOneDigit, 'text-gray-500': !passwordValidationOneDigit }">
+          <div
+            class="flex items-center"
+            :class="{ 'text-green-600': passwordValidationOneDigit, 'text-gray-500': !passwordValidationOneDigit }"
+          >
             <SfIconCheck v-if="passwordValidationOneDigit" size="sm" class="mr-2" />
             <SfIconClose v-else size="sm" class="mr-2" />
             {{ t('auth.signup.passwordValidation.numbers') }}
           </div>
-          <div class="flex items-center" :class="{
-            'text-green-600': passwordValidationOneLetter,
-            'text-gray-500': !passwordValidationOneLetter,
-          }">
+          <div
+            class="flex items-center"
+            :class="{
+              'text-green-600': passwordValidationOneLetter,
+              'text-gray-500': !passwordValidationOneLetter,
+            }"
+          >
             <SfIconCheck v-if="passwordValidationOneLetter" size="sm" class="mr-2" />
             <SfIconClose v-else size="sm" class="mr-2" />
             {{ t('auth.signup.passwordValidation.letters') }}
@@ -60,45 +87,60 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label>
             <UiFormLabel>
-              {{ hasCompany ? t('form.firstNameLabel') : `${t('form.firstNameLabel')} ${t('form.required')}` }}
+              {{ t('form.firstNameLabel') }}
             </UiFormLabel>
-            <SfInput v-model="formFields.firstName.value" name="firstName" autocomplete="given-name"
-              v-bind="formFieldsAttributes.firstName" :invalid="!!errors['firstName']" />
+            <SfInput
+              v-model="formFields.firstName.value"
+              name="firstName"
+              autocomplete="given-name"
+              v-bind="formFieldsAttributes.firstName"
+              :invalid="!!errors['firstName']"
+            />
             <ErrorMessage as="span" name="firstName" class="flex text-negative-700 text-sm mt-2" />
           </label>
 
           <label>
             <UiFormLabel>
-              {{ hasCompany ? t('form.lastNameLabel') : `${t('form.lastNameLabel')} ${t('form.required')}` }}
+              {{ t('form.lastNameLabel') }}
             </UiFormLabel>
-            <SfInput v-model="formFields.lastName.value" name="lastName" autocomplete="family-name"
-              v-bind="formFieldsAttributes.lastName" :invalid="!!errors['lastName']" />
+            <SfInput
+              v-model="formFields.lastName.value"
+              name="lastName"
+              autocomplete="family-name"
+              v-bind="formFieldsAttributes.lastName"
+              :invalid="!!errors['lastName']"
+            />
             <ErrorMessage as="span" name="lastName" class="flex text-negative-700 text-sm mt-2" />
           </label>
         </div>
 
-        <div class="grid grid-cols-1">
-          <SfLink class="select-none hover:cursor-pointer" role="button" tabindex="0" :aria-pressed="hasCompany"
-            :aria-label="!hasCompany ? t('form.addCompany') : t('form.removeCompany')" @click="hasCompany = !hasCompany"
-            @keydown.enter.space="hasCompany = !hasCompany">
-            {{ !hasCompany ? t('form.addCompany') : t('form.removeCompany') }}
-          </SfLink>
-        </div>
-
-        <div v-if="hasCompany" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label for="companyName">
             <UiFormLabel for="companyName">{{ t('form.companyLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <SfInput id="companyName" v-model="formFields.companyName.value" name="companyName"
-              autocomplete="organization" v-bind="formFieldsAttributes.companyName" :invalid="!!errors['companyName']"
-              :aria-invalid="!!errors['companyName']" />
+            <SfInput
+              id="companyName"
+              v-model="formFields.companyName.value"
+              name="companyName"
+              autocomplete="organization"
+              v-bind="formFieldsAttributes.companyName"
+              :invalid="!!errors['companyName']"
+              :aria-invalid="!!errors['companyName']"
+            />
             <ErrorMessage as="span" name="companyName" class="flex text-negative-700 text-sm mt-2" />
           </label>
 
           <label for="vatNumber">
             <UiFormLabel for="vatNumber">{{ t('form.vatIdLabel') }}</UiFormLabel>
-            <SfInput id="vatNumber" v-model="formFields.vatNumber.value" name="vatNumber" autocomplete="vat-number"
-              v-bind="formFieldsAttributes.vatNumber" :invalid="invalidVAT" :aria-invalid="invalidVAT"
-              @input="clearInvalidVAT" />
+            <SfInput
+              id="vatNumber"
+              v-model="formFields.vatNumber.value"
+              name="vatNumber"
+              autocomplete="vat-number"
+              v-bind="formFieldsAttributes.vatNumber"
+              :invalid="invalidVAT"
+              :aria-invalid="invalidVAT"
+              @input="clearInvalidVAT"
+            />
             <span v-if="invalidVAT" class="flex text-negative-700 text-sm mt-2">
               {{ t('storefrontError.address.vatInvalid') }}
             </span>
@@ -108,15 +150,25 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label>
             <UiFormLabel>{{ t('form.streetNameLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <SfInput v-model="formFields.streetName.value" name="streetName" autocomplete="address-line1"
-              v-bind="formFieldsAttributes.streetName" :invalid="!!errors['streetName']" />
+            <SfInput
+              v-model="formFields.streetName.value"
+              name="streetName"
+              autocomplete="address-line1"
+              v-bind="formFieldsAttributes.streetName"
+              :invalid="!!errors['streetName']"
+            />
             <ErrorMessage as="span" name="streetName" class="flex text-negative-700 text-sm mt-2" />
           </label>
 
           <label>
             <UiFormLabel>{{ t('form.streetNumberLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <SfInput v-model="formFields.apartment.value" name="streetNumber" autocomplete="address-line2"
-              v-bind="formFieldsAttributes.apartment" :invalid="!!errors['apartment']" />
+            <SfInput
+              v-model="formFields.apartment.value"
+              name="streetNumber"
+              autocomplete="address-line2"
+              v-bind="formFieldsAttributes.apartment"
+              :invalid="!!errors['apartment']"
+            />
             <ErrorMessage as="span" name="apartment" class="flex text-negative-700 text-sm mt-2" />
           </label>
         </div>
@@ -124,15 +176,25 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label>
             <UiFormLabel>{{ t('form.cityLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <SfInput v-model="formFields.city.value" name="city" autocomplete="address-level2"
-              v-bind="formFieldsAttributes.city" :invalid="!!errors['city']" />
+            <SfInput
+              v-model="formFields.city.value"
+              name="city"
+              autocomplete="address-level2"
+              v-bind="formFieldsAttributes.city"
+              :invalid="!!errors['city']"
+            />
             <ErrorMessage as="span" name="city" class="flex text-negative-700 text-sm mt-2" />
           </label>
 
           <label>
             <UiFormLabel>{{ t('form.postalCodeLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <SfInput v-model="formFields.zipCode.value" name="zipCode" autocomplete="postal-code"
-              v-bind="formFieldsAttributes.zipCode" :invalid="!!errors['zipCode']" />
+            <SfInput
+              v-model="formFields.zipCode.value"
+              name="zipCode"
+              autocomplete="postal-code"
+              v-bind="formFieldsAttributes.zipCode"
+              :invalid="!!errors['zipCode']"
+            />
             <ErrorMessage as="span" name="zipCode" class="flex text-negative-700 text-sm mt-2" />
           </label>
         </div>
@@ -140,11 +202,21 @@
         <div class="grid grid-cols-1">
           <label class="w-full">
             <UiFormLabel>{{ t('form.countryLabel') }} {{ t('form.required') }}</UiFormLabel>
-            <SfSelect v-model="formFields.country.value" name="country" v-bind="formFieldsAttributes.country"
-              :placeholder="t('form.selectPlaceholder')" :invalid="!!errors['country']" wrapper-class-name="bg-white"
-              class="!ring-1 !ring-neutral-200" autocomplete="country-name">
-              <option v-for="(shippingCountry, index) in shippingCountries" :key="`shipping-country-${index}`"
-                :value="shippingCountry.id.toString()">
+            <SfSelect
+              v-model="formFields.country.value"
+              name="country"
+              v-bind="formFieldsAttributes.country"
+              :placeholder="t('form.selectPlaceholder')"
+              :invalid="!!errors['country']"
+              wrapper-class-name="bg-white"
+              class="!ring-1 !ring-neutral-200"
+              autocomplete="country-name"
+            >
+              <option
+                v-for="(shippingCountry, index) in shippingCountries"
+                :key="`shipping-country-${index}`"
+                :value="shippingCountry.id.toString()"
+              >
                 {{ shippingCountry.currLangName }}
               </option>
             </SfSelect>
@@ -153,15 +225,24 @@
         </div>
 
         <div class="flex items-start space-x-3">
-          <SfCheckbox id="privacyPolicy" v-model="formFields.privacyPolicy.value"
-            v-bind="formFieldsAttributes.privacyPolicy" value="value" class="mt-1 peer" />
+          <SfCheckbox
+            id="privacyPolicy"
+            v-model="formFields.privacyPolicy.value"
+            v-bind="formFieldsAttributes.privacyPolicy"
+            value="value"
+            class="mt-1 peer"
+          />
           <label
             class="text-sm text-neutral-900 cursor-pointer peer-disabled:text-disabled-900 select-none leading-relaxed"
-            for="privacyPolicy">
+            for="privacyPolicy"
+          >
             <i18n-t keypath="form.privacyPolicyLabel" scope="global">
               <template #privacyPolicy>
-                <SfLink :href="localePath(paths.privacyPolicy)" target="_blank"
-                  class="text-primary-600 hover:text-primary-700 underline focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded">
+                <SfLink
+                  :href="localePath(paths.privacyPolicy)"
+                  target="_blank"
+                  class="text-primary-600 hover:text-primary-700 underline focus:outline focus:outline-offset-2 focus:outline-2 outline-secondary-600 rounded"
+                >
                   {{ t('privacyPolicy') }}
                 </SfLink>
               </template>
@@ -171,9 +252,15 @@
         </div>
         <ErrorMessage as="div" name="privacyPolicy" class="text-negative-700 text-left text-sm -mt-2" />
 
-        <NuxtTurnstile v-if="turnstileSiteKey.length > 0 && turnstileLoad" v-bind="formFieldsAttributes.turnstile"
-          ref="turnstileElement" v-model="formFields.turnstile.value" :site-key="turnstileSiteKey"
-          :options="{ theme: 'light' }" class="flex justify-center" />
+        <NuxtTurnstile
+          v-if="turnstileSiteKey.length > 0 && turnstileLoad"
+          v-bind="formFieldsAttributes.turnstile"
+          ref="turnstileElement"
+          v-model="formFields.turnstile.value"
+          :site-key="turnstileSiteKey"
+          :options="{ theme: 'light' }"
+          class="flex justify-center"
+        />
         <ErrorMessage as="div" name="turnstile" class="text-negative-700 text-center text-sm -mt-2" />
 
         <div class="grid grid-cols-1 gap-4">
