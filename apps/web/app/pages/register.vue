@@ -77,13 +77,7 @@
           </label>
         </div>
 
-        <div class="grid grid-cols-1">
-          <SfLink class="select-none hover:cursor-pointer" role="button" tabindex="0" :aria-pressed="hasCompany"
-            :aria-label="!hasCompany ? t('form.addCompany') : t('form.removeCompany')" @click="hasCompany = !hasCompany"
-            @keydown.enter.space="hasCompany = !hasCompany">
-            {{ !hasCompany ? t('form.addCompany') : t('form.removeCompany') }}
-          </SfLink>
-        </div>
+        
 
         <div v-if="hasCompany" class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label for="companyName">
@@ -218,6 +212,7 @@ const {
   formFields,
   formFieldsAttributes,
 } = useRegisterForm();
+hasCompany.value = true;
 
 onNuxtReady(async () => {
   if (!shippingCountries.value?.length) await fetchAggregatedCountries();
