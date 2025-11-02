@@ -111,7 +111,7 @@ header form[role="search"] {
 
 /* Main Content Padding Bottom anpassen */
 .sc-main-content {
-  @apply pt-6 md:pt-6 pb-10 md:pb-10;
+  @apply pt-8 md:pt-8;
 }
 
 /* CategoryPage Grid Anpassung */
@@ -127,6 +127,10 @@ header form[role="search"] {
 /* PurchaseCard Styling Produktseite */
 .sc-purchase-card {
   @apply bg-white md:border md:border-neutral-100 md:shadow-lg md:rounded-lg md:sticky md:top-40;
+}
+
+.sc-purchase-card__title {
+  @apply font-bold text-4xl break-word;
 }
 
 /* Footer Anpassungen */
