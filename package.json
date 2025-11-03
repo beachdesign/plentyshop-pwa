@@ -100,7 +100,7 @@
     "@vitejs/plugin-vue-jsx": "5.0.1"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": "24.x"
   },
   "packageManager": "npm@10.8.1",
   "config": {
