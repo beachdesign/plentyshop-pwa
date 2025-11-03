@@ -94,7 +94,6 @@ apple-pay-button {
   svg,
   video {
     display: block;
-    vertical-align: middle;
   }
 }
 
@@ -110,6 +109,11 @@ header form[role="search"] {
   background-color: #f6f6f6;
 }
 
+/* Main Content Padding Bottom anpassen */
+.sc-main-content {
+  @apply pt-8 md:pt-8;
+}
+
 /* CategoryPage Grid Anpassung */
 .sc-category-page-grid {
   @apply grid grid-cols-1 2xs:grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 mb-10 md:mb-5;
@@ -123,4 +127,16 @@ header form[role="search"] {
 /* PurchaseCard Styling Produktseite */
 .sc-purchase-card {
   @apply bg-white md:border md:border-neutral-100 md:shadow-lg md:rounded-lg md:sticky md:top-40;
+}
+
+.sc-purchase-card__title {
+  @apply font-bold text-4xl break-word;
+}
+
+/* Footer Anpassungen */
+.sc-footer-col {
+  @apply ml-4 mb-4 text-lg font-bold leading-7 text-neutral-900;
+}
+.sc-footer-list-item {
+  @apply py-1.5 !bg-transparent typography-text-sm;
 }

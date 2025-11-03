@@ -1,7 +1,7 @@
 <template>
   <div class="sc-bg-gray">
     <UiHeader />
-    <main>
+    <main class="sc-main-content">
       <slot />
     </main>
     <UiNavbarBottom v-if="viewport.isLessThan('lg')" />

@@ -8,7 +8,7 @@
       <div class="drift-zoom-image">
         <section class="p-4 xl:p-6">
           <div class="grid grid-cols-[2fr_1fr] mt-4">
-            <h1 class="font-bold typography-headline-4 break-word" data-testid="product-name">
+            <h1 class="sc-purchase-card__title" data-testid="product-name">
               {{ productGetters.getName(product) }}
             </h1>
             <div class="flex items-center justify-center">
@@ -52,23 +52,6 @@
           <UiBadges class="mt-4" :product="product" :use-availability="true" />
           <div class="mt-2 variation-properties">
             <VariationProperties :product="product" />
-          </div>
-          <div class="inline-flex items-center mt-4 mb-2">
-            <SfRating
-              size="xs"
-              :half-increment="true"
-              :value="reviewGetters.getAverageRating(reviewAverage, 'half')"
-              :max="5"
-            />
-            <SfCounter class="ml-1" size="xs">{{ reviewGetters.getTotalReviews(reviewAverage) }}</SfCounter>
-            <UiButton
-              variant="tertiary"
-              class="ml-2 text-xs text-neutral-500 cursor-pointer"
-              data-testid="show-reviews"
-              @click="scrollToReviews"
-            >
-              {{ t('showAllReviews') }}
-            </UiButton>
           </div>
           <div
             v-if="productGetters.getShortDescription(product).length > 0"

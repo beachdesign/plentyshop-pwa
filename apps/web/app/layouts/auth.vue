@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sc-bg-gray">
     <UiHeader />
     <main
       :class="[

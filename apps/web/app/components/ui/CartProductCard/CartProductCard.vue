@@ -78,19 +78,7 @@
         data-testid="cart-product-card-bundle-components-list"
       >
         <div v-for="(item, index) in cartItem.variation.bundleComponents" :key="index">
-          <SfLink
-            v-if="productBundleGetters.isItemBundleSalable(item)"
-            :tag="NuxtLink"
-            :to="localePath(productBundleGetters.getBundleItemUrl(item))"
-            variant="secondary"
-            class="no-underline typography-text-sm"
-          >
-            <p>
-              {{ productBundleGetters.getBundleItemQuantity(item) }}x
-              <span class="underline px-1 h-">{{ productBundleGetters.getBundleItemName(item) }}</span>
-            </p>
-          </SfLink>
-          <p v-else class="text-sm">
+          <p class="text-sm">
             {{ productBundleGetters.getBundleItemQuantity(item) }}x
             <span class="px-1 h-">{{ productBundleGetters.getBundleItemName(item) }}</span>
           </p>

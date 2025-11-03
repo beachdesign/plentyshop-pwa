@@ -1,5 +1,5 @@
 <template>
-  <div :class="['h-full flex scroll-smooth relative', galleryDirClass, galleryGapClass]" data-testid="gallery">
+  <div :class="['h-full mt-10 flex scroll-smooth relative', galleryDirClass, galleryGapClass]" data-testid="gallery">
     <div
       ref="mainBox"
       class="after:block after:pt-[100%] flex-1 relative overflow-hidden w-full max-h-[600px]"

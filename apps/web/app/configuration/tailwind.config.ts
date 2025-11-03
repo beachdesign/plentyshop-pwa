@@ -2,12 +2,19 @@ import sfTypography from '@storefront-ui/typography';
 import { tailwindConfig } from '@storefront-ui/vue/tailwind-config';
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import path from 'path';
 
 const fontFamilyText = process.env.NUXT_PUBLIC_FONT || 'Red Hat Text';
 
 export default {
   presets: [tailwindConfig],
-  content: ['./**/*.vue', '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
+  content: [
+    './**/*.vue',
+    '../../../theme-smartchip/**/*.vue',
+    '../../../theme-smartchip/components/sections/*.vue',
+    path.resolve(__dirname, '../../theme-smartchip/components/**/*.{vue,js,ts}'),
+    '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}',
+  ],
   safelist: [
     {
       pattern: /^col-span-(1[0-2]|[1-9])$/,
