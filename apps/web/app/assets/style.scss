@@ -130,13 +130,14 @@ header form[role="search"] {
 }
 
 .sc-purchase-card__title {
-  @apply font-bold text-4xl break-word;
+  @apply font-bold text-4xl;
 }
 
 /* Footer Anpassungen */
 .sc-footer-col {
   @apply ml-4 mb-4 text-lg font-bold leading-7 text-neutral-900;
 }
+
 .sc-footer-list-item {
   @apply py-1.5 !bg-transparent typography-text-sm;
 }
