@@ -102,14 +102,11 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "packageManager": "npm@10.8.1",
+  "packageManager": "npm@11.6.1",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog",
       "disableScopeLowerCase": true
     }
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.9.5"
   }
 }
