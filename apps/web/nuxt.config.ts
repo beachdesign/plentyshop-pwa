@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     asyncContext: true,
   },
   appConfig: {
-    titleSuffix: process.env.STORENAME || 'PlentyONE Shop',
+    titleSuffix: process.env.NAME || 'PlentyONE Shop',
     fallbackCurrency: 'GBP',
   },
   imports: {
@@ -36,6 +36,7 @@ export default defineNuxtConfig({
     },
     optimizeDeps: {
       include: [
+        'cookie',
         '@intlify/core-base',
         '@intlify/shared',
         '@paypal/paypal-js',
@@ -210,7 +211,7 @@ export default defineNuxtConfig({
         process.env.LOGO ||
         'https://cdn02.plentymarkets.com/mevofvd5omld/frontend/Logo/logo.svg',
       homepageCategoryId: Number(process.env.HOMEPAGE) ?? null,
-      storename: process.env.STORENAME || 'PlentyONE GmbH',
+      storename: process.env.NAME || 'PlentyONE GmbH',
       noCache: process.env.NO_CACHE || '',
       configId: process.env.CONFIG_ID || '',
       isHero: true,
