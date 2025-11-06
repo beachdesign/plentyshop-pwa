@@ -1,7 +1,7 @@
 <template>
   <section id="what-you-need" role="region" aria-labelledby="what-you-need-label"
     class="relative pt-16 pb-32 bg-cover bg-no-repeat bg-center "
-    style="background-image:url('https://nailconnect.smart-chip.com/images/bg/bg-dark.png');">
+    style="background-image:url('https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/bg-dark.webp');">
     <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
     <div class="max-w-screen-2xl mx-auto px-6 relative">
       <header class="text-left mb-10">
@@ -14,7 +14,7 @@
           aria-label="Nail&lt;br&gt;Know-how">
           <div class="pt-5 px-5 pb-2 bg-white">
             <div class="relative aspect-[5/3]">
-              <img src="https://nailconnect.smart-chip.com/images/requirements/nail-knowhow-500.webp"
+              <img src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/nail-knowhow-500.webp"
                 alt="Nail Know-how" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy"
                 decoding="async">
             </div>
@@ -31,7 +31,7 @@
           aria-label="Maniküre-&lt;br&gt;Equipment">
           <div class="pt-5 px-5 pb-2 bg-white">
             <div class="relative aspect-[5/3]">
-              <img src="https://nailconnect.smart-chip.com/images/requirements/nail-equipment-500.webp"
+              <img src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/nail-equipment-500.webp"
                 alt="Maniküre-Equipment" class="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy"
                 decoding="async">
             </div>
@@ -48,7 +48,7 @@
           aria-label="Umgang mit&lt;br&gt;Technologie">
           <div class="pt-5 px-5 pb-2 bg-white">
             <div class="relative aspect-[5/3]">
-              <img src="https://nailconnect.smart-chip.com/images/requirements/devices-500.webp"
+              <img src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/devices-500.webp"
                 alt="Umgang mit Technologie" class="absolute inset-0 w-full h-full object-cover rounded-lg"
                 loading="lazy" decoding="async">
             </div>
@@ -65,7 +65,7 @@
           aria-label="Verpflichtung&lt;br&gt;zur Qualität">
           <div class="pt-5 px-5 pb-2 bg-white">
             <div class="relative aspect-[5/3]">
-              <img src="https://nailconnect.smart-chip.com/images/requirements/excellence-500.webp"
+              <img src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/excellence-500.webp"
                 alt="Verpflichtung zur Qualität" class="absolute inset-0 w-full h-full object-cover rounded-lg"
                 loading="lazy" decoding="async">
             </div>
