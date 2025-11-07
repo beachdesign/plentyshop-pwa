@@ -2,26 +2,11 @@
   <NuxtLayout name="checkout" :back-label-desktop="t('back')" :back-label-mobile="t('back')" :heading="t('checkout')">
     <div class="md:w-full md:flex md:justify-center">
       <div class="flex flex-col gap-4 p-2 md:p-6 rounded-md w-full md:w-2/3 lg:w-1/2 3xl:w-2/5">
-        <h2 class="font-bold text-lg">{{ t('guestCheckout') }}</h2>
-
-        <UiButton
-          data-testid="guest-checkout-button"
-          :tag="NuxtLink"
-          :to="localePath(paths.checkout)"
-          class="w-full my-4"
-        >
-          {{ t('continueAsGuest') }}
-        </UiButton>
-
-        <OrDivider />
 
         <template v-if="loadedConfig && isAvailable('guestLoginPage').value">
           <PayPalExpressButton class="mt-4" location="guestLoginPage" type="CartPreview" />
-          <PayPalPayLaterBanner
-            placement="cart"
-            location="guestLoginPage"
-            :amount="cartGetters.getTotal(cartGetters.getTotals(cart))"
-          />
+          <PayPalPayLaterBanner placement="cart" location="guestLoginPage"
+            :amount="cartGetters.getTotal(cartGetters.getTotals(cart))" />
           <OrDivider />
         </template>
 
@@ -51,24 +36,15 @@
 
           <div class="text-center mt-6">
             <h3 class="font-bold text-lg mb-6">{{ t('auth.login.createAccount') }}</h3>
-            <p>{{ t('auth.login.createAccountLater') }}!</p>
+            <p><a href="/register">Jetzt registrieren!</a></p>
           </div>
         </form>
       </div>
-      <UiModal
-        v-if="isAuthenticationOpen"
-        v-model="isAuthenticationOpen"
-        tag="section"
-        class="h-full w-full overflow-auto md:w-[500px] md:h-fit"
-      >
+      <UiModal v-if="isAuthenticationOpen" v-model="isAuthenticationOpen" tag="section"
+        class="h-full w-full overflow-auto md:w-[500px] md:h-fit">
         <header>
-          <UiButton
-            :aria-label="t('closeDialog')"
-            square
-            variant="tertiary"
-            class="absolute right-2 top-2"
-            @click="toggleForgotPasswordModal"
-          >
+          <UiButton :aria-label="t('closeDialog')" square variant="tertiary" class="absolute right-2 top-2"
+            @click="toggleForgotPasswordModal">
             <SfIconClose />
           </UiButton>
           <ForgotPasswordComponent :is-forgot-password-only="true" />

@@ -60,7 +60,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label>
             <UiFormLabel>
-              {{ hasCompany ? t('form.firstNameLabel') : `${t('form.firstNameLabel')} ${t('form.required')}` }}
+              {{ `${t('form.firstNameLabel')} ${t('form.required')}` }}
             </UiFormLabel>
             <SfInput v-model="formFields.firstName.value" name="firstName" autocomplete="given-name"
               v-bind="formFieldsAttributes.firstName" :invalid="!!errors['firstName']" />
@@ -69,7 +69,7 @@
 
           <label>
             <UiFormLabel>
-              {{ hasCompany ? t('form.lastNameLabel') : `${t('form.lastNameLabel')} ${t('form.required')}` }}
+              {{ `${t('form.lastNameLabel')} ${t('form.required')}` }}
             </UiFormLabel>
             <SfInput v-model="formFields.lastName.value" name="lastName" autocomplete="family-name"
               v-bind="formFieldsAttributes.lastName" :invalid="!!errors['lastName']" />
@@ -77,7 +77,7 @@
           </label>
         </div>
 
-        
+
 
         <div v-if="hasCompany" class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label for="companyName">
