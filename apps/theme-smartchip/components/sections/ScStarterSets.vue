@@ -182,7 +182,7 @@ const ctaLabel = computed(() => (isAuthorized.value ? 'Zum Set' : 'Jetzt registr
  */
 const ctaHref = (setName: string) => {
   if (!isAuthorized.value) return '/register'
-  return `/sets/${slugify(setName)}` // Dummy – kannst du durch die echten Links ersetzen
+  return `${slugify(setName)}` // Dummy – kannst du durch die echten Links ersetzen
 }
 
 /**
