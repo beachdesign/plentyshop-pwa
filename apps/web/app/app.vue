@@ -2,41 +2,28 @@
   <ClientOnly>
     <component :is="Toolbar" v-if="clientPreview" />
   </ClientOnly>
-  <div
-    class="w-100 relative md:flex"
-    :class="{
-      'lg:flex-row-reverse': placement !== 'left',
-      'md:max-lg:w-[calc(100%-54px)]': disableActions && drawerOpen && clientPreview,
-      'md:max-lg:w-[calc(100%-66px)]': disableActions && !drawerOpen && clientPreview,
-    }"
-  >
+  <div class="w-100 relative md:flex" :class="{
+    'lg:flex-row-reverse': placement !== 'left',
+    'md:max-lg:w-[calc(100%-54px)]': disableActions && drawerOpen && clientPreview,
+    'md:max-lg:w-[calc(100%-66px)]': disableActions && !drawerOpen && clientPreview,
+  }">
     <ClientOnly>
-      <component
-        :is="SettingsToolbar"
-        v-if="clientPreview && disableActions"
-        :class="{
-          'order-first': placement === 'left',
-          'order-last': placement === 'right',
-          'mr-3': !drawerOpen || placement === 'right',
-        }"
-      />
+      <component :is="SettingsToolbar" v-if="clientPreview && disableActions" :class="{
+        'order-first': placement === 'left',
+        'order-last': placement === 'right',
+        'mr-3': !drawerOpen || placement === 'right',
+      }" />
     </ClientOnly>
 
-    <component
-      :is="SiteConfigurationDrawer"
-      v-if="drawerOpen"
-      class="absolute lg:relative bg-white font-editor"
-      :class="{ 'mr-3': placement === 'left', 'ml-3': placement === 'right' }"
-    />
+    <component :is="SiteConfigurationDrawer" v-if="drawerOpen" class="absolute lg:relative bg-white font-editor"
+      :class="{ 'mr-3': placement === 'left', 'ml-3': placement === 'right' }" />
 
-    <div
-      class="bg-white w-full relative"
-      :class="{
-        'lg:w-3/4': drawerOpen,
-        'transition-all duration-300 ease-in-out': placement === 'left' && drawerOpen,
-        'lg:w-[calc(100%-66px)]': clientPreview && !drawerOpen && disableActions,
-      }"
-    >
+    <div class="bg-white w-full relative" :class="{
+      'lg:w-3/4': drawerOpen,
+      'transition-all duration-300 ease-in-out': placement === 'left' && drawerOpen,
+      'lg:w-[calc(100%-66px)]': clientPreview && !drawerOpen && disableActions,
+    }">
+
       <Body class="font-body bg-editor-body-bg" :class="bodyClass" :style="currentFont" />
       <UiNotifications />
       <VitePwaManifest />
@@ -51,7 +38,8 @@
     <component :is="UnlinkCategoryModal" v-if="clientPreview" />
   </ClientOnly>
   <ClientOnly>
-    <LazyReloadPWA hydrate-on-idle />
+    {#
+    <LazyReloadPWA hydrate-on-idle /> #}
   </ClientOnly>
 </template>
 
