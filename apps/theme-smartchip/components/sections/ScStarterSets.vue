@@ -1,5 +1,5 @@
 <template>
-  <section id="starter-sets" role="region" aria-labelledby="starter-sets-label" class="pt-16 pb-32">
+  <section v-if="isAuthorized" id="starter-sets" role="region" aria-labelledby="starter-sets-label" class="pt-16 pb-32">
     <div class="max-w-screen-2xl mx-auto px-6">
       <header class="text-left mb-10">
         <h2 id="starter-sets-label" class="text-4xl md:text-7xl font-bold text-gray-900">Starter-Sets für Studios</h2>
@@ -99,9 +99,15 @@
       </div>
     </div>
   </section>
+  <section v-else class="py-32">
+    <div class="max-w-screen-2xl mx-auto px-6 text-center">
+      <p class="text-xl text-gray-600">Bitte melde dich an, um unsere Starter-Sets für Studios zu sehen.</p>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
+const { isAuthorized } = useCustomer();
 </script>
 
 <style scoped>
