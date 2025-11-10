@@ -8,10 +8,6 @@
     <ScWhatYouNeed />
     <ScStarterSets />
 
-    <ClientOnly>
-      <ScAuthBadge />
-    </ClientOnly>
-
     <EditablePage :identifier="'index'" :type="'immutable'" />
   </div>
 </template>
