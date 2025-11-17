@@ -74,7 +74,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['~/assets/style.scss'],
   // TODO: build is consistently failing because of this. check whether we need pre-render check.
   nitro: {
     prerender: {
