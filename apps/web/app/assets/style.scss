@@ -142,6 +142,9 @@ header form[role="search"] {
   @apply py-1.5 !bg-transparent typography-text-sm;
 }
 
+/*   paths.ts shipping: '/shipping-info', <-- geändert von '/shipping'
+ */
+
 .sc-test {
   background-color: red;
 }
