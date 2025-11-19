@@ -1,7 +1,6 @@
 <template>
   <form
-    class="md:rounded-md"
-    :class="{ 'md:shadow-lg': configuration?.dropShadow, 'md:border md:border-neutral-100': configuration?.borders }"
+    class="sc-purchase-card"
     :style="inlineStyle"
     data-testid="purchase-card"
     @submit.prevent="handleAddToCart()"
@@ -11,7 +10,7 @@
         <section class="p-4 xl:p-6">
           <template v-for="key in configuration?.fieldsOrder" :key="key">
             <template v-if="key === 'itemName' && configuration?.fields.itemName">
-              <h1 class="font-bold typography-headline-4 break-word" data-testid="product-name">
+              <h1 class="sc-purchase-card_title" data-testid="product-name">
                 {{ productGetters.getName(product) }}
               </h1>
             </template>

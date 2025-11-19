@@ -124,13 +124,13 @@ header form[role="search"] {
   @apply bg-white rounded-lg hover:shadow-lg flex flex-col;
 }
 
-/* PurchaseCard Styling Produktseite */
+/* PurchaseCard.vue Styling Produktseite */
 .sc-purchase-card {
   @apply bg-white md:border md:border-neutral-100 md:shadow-lg md:rounded-lg md:sticky md:top-40;
 }
 
-.sc-purchase-card__title {
-  @apply font-bold text-4xl;
+.sc-purchase-card_title {
+  @apply font-bold text-4xl break-words;
 }
 
 /* Footer Anpassungen */
