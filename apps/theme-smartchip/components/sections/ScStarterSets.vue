@@ -15,15 +15,24 @@
             </div>
 
             <div class="p-10 pb-0">
-              <div class="relative pb-[100%]">
-                <img
-                  src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-10.webp"
-                  alt="Set mit 10 Smart Chips"
-                  class="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
+              <!-- Bild nur im Client, und dort je nach Login verlinkt -->
+              <ClientOnly>
+                <div class="relative pb-[100%]">
+                  <component
+                    :is="isAuthorized ? 'a' : 'div'"
+                    :href="isAuthorized ? ctaHref('/sc-set-10_184_1143') : undefined"
+                    class="block relative pb-[100%]"
+                  >
+                    <img
+                      src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-10.webp"
+                      alt="Set mit 10 Smart Chips"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </component>
+                </div>
+              </ClientOnly>
             </div>
 
             <hr class="mt-6 mb-4 border-gray-200">
@@ -64,15 +73,23 @@
             </div>
 
             <div class="p-10 pb-0">
-              <div class="relative pb-[100%]">
-                <img
-                  src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-50.webp"
-                  alt="Set mit 50 Smart Chips"
-                  class="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
+              <ClientOnly>
+                <div class="relative pb-[100%]">
+                  <component
+                    :is="isAuthorized ? 'a' : 'div'"
+                    :href="isAuthorized ? ctaHref('/sc-set-50_185_1144') : undefined"
+                    class="block relative pb-[100%]"
+                  >
+                    <img
+                      src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-50.webp"
+                      alt="Set mit 50 Smart Chips"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </component>
+                </div>
+              </ClientOnly>
             </div>
 
             <hr class="mt-6 mb-4 border-gray-200">
@@ -113,15 +130,23 @@
             </div>
 
             <div class="p-10 pb-0">
-              <div class="relative pb-[100%]">
-                <img
-                  src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-200.webp"
-                  alt="Set mit 200 Smart Chips"
-                  class="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </div>
+              <ClientOnly>
+                <div class="relative pb-[100%]">
+                  <component
+                    :is="isAuthorized ? 'a' : 'div'"
+                    :href="isAuthorized ? ctaHref('/sc-set-200_186_1145') : undefined"
+                    class="block relative pb-[100%]"
+                  >
+                    <img
+                      src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-200.webp"
+                      alt="Set mit 200 Smart Chips"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </component>
+                </div>
+              </ClientOnly>
             </div>
 
             <hr class="mt-6 mb-4 border-gray-200">
@@ -165,24 +190,20 @@ import { computed } from 'vue'
 const { isAuthorized } = useCustomer()
 
 /**
- * Slug für Dummy-Link erzeugen (SC-Set 10 -> sc-set-10)
- */
-const slugify = (name: string) =>
-  name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-
-/**
  * CTA-Label abhängig vom Login
  */
-const ctaLabel = computed(() => (isAuthorized.value ? 'Zum Set' : 'Jetzt registrieren'))
+const ctaLabel = computed(() =>
+  isAuthorized.value ? 'Zum Set' : 'Jetzt registrieren'
+)
 
 /**
  * CTA-Href abhängig vom Login
  * - Public: /register
- * - Eingeloggt: Dummy-Link je Set (z. B. /sets/sc-set-10)
+ * - Eingeloggt: übergebener Pfad unverändert
  */
-const ctaHref = (setName: string) => {
+const ctaHref = (path: string) => {
   if (!isAuthorized.value) return '/register'
-  return `${slugify(setName)}` // Dummy – kannst du durch die echten Links ersetzen
+  return path
 }
 
 /**

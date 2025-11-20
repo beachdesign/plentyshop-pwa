@@ -45,25 +45,7 @@
                 <VariationProperties :product="product" />
               </div>
             </template>
-            <template v-if="key === 'starRating' && configuration?.fields.starRating">
-              <div class="inline-flex items-center mb-2">
-                <SfRating
-                  size="xs"
-                  :half-increment="true"
-                  :value="reviewGetters.getAverageRating(reviewAverage, 'half')"
-                  :max="5"
-                />
-                <SfCounter class="ml-1" size="xs">{{ reviewGetters.getTotalReviews(reviewAverage) }}</SfCounter>
-                <UiButton
-                  variant="tertiary"
-                  class="ml-2 text-xs text-neutral-500 cursor-pointer"
-                  data-testid="show-reviews"
-                  @click="scrollToReviews"
-                >
-                  {{ t('showAllReviews') }}
-                </UiButton>
-              </div>
-            </template>
+            
             <template v-if="key === 'previewText' && configuration?.fields.previewText">
               <div
                 v-if="productGetters.getShortDescription(product).length > 0"
