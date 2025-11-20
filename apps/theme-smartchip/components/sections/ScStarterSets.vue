@@ -14,10 +14,10 @@
               <h3 class="text-center text-2xl font-bold mt-6">SC-Set 10</h3>
             </div>
 
-            <div class="p-10 pb-0">
+            <div class="p-4 pb-0">
               <!-- Bild nur im Client, und dort je nach Login verlinkt -->
               <ClientOnly>
-                <div class="relative pb-[100%]">
+                <div class="relative pb-4">
                   <component
                     :is="isAuthorized ? 'a' : 'div'"
                     :href="isAuthorized ? ctaHref('/sc-set-10_184_1143') : undefined"
@@ -72,9 +72,9 @@
               <h3 class="text-center text-2xl font-bold mt-6">SC-Set 50</h3>
             </div>
 
-            <div class="p-10 pb-0">
+            <div class="p-4 pb-0">
               <ClientOnly>
-                <div class="relative pb-[100%]">
+                <div class="relative pb-4">
                   <component
                     :is="isAuthorized ? 'a' : 'div'"
                     :href="isAuthorized ? ctaHref('/sc-set-50_185_1144') : undefined"
@@ -129,9 +129,9 @@
               <h3 class="text-center text-2xl font-bold mt-6">SC-Set 200</h3>
             </div>
 
-            <div class="p-10 pb-0">
+            <div class="p-4 pb-0">
               <ClientOnly>
-                <div class="relative pb-[100%]">
+                <div class="relative pb-4">
                   <component
                     :is="isAuthorized ? 'a' : 'div'"
                     :href="isAuthorized ? ctaHref('/sc-set-200_186_1145') : undefined"
