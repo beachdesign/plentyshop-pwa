@@ -54,11 +54,11 @@ const items = computed(() => [
     icon: SfIconHome,
     link: localePath(paths.home),
   },
-  {
-    label: t('products'),
-    icon: SfIconMenu,
-    link: '',
-  },
+  // {
+  //   label: t('products'),
+  //   icon: SfIconMenu,
+  //   link: '',
+  // },
   {
     label: t('wishlist'),
     icon: SfIconFavorite,
