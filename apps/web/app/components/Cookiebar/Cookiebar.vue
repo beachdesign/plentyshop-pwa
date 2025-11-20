@@ -156,7 +156,7 @@
   </div>
 
   <!-- Button to Open Cookie Tab -->
-  <div v-if="!visible" class="z-10 h-auto w-12 fixed bottom-[4.3rem] md:bottom-2 left-2 xl:left-auto xl:right-2">
+  <div v-if="!visible" class="z-10 h-auto w-12 fixed bottom-[5.3rem] md:bottom-2 left-2 xl:left-auto xl:right-2">
     <SfTooltip :label="t('CookieBar.Cookie Settings')" placement="left">
       <UiButton
         variant="secondary"
