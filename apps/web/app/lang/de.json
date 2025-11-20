@@ -1,8 +1,8 @@
 {
   "customerWish": "Hinweise und Wünsche",
-  "customerWishMessage": "Geben Sie hier Ihre Nachricht an uns ein.",
-  "customerReference": "Ihr Zeichen",
-  "customerReferencePlaceholder": "Geben Sie hier Ihr Zeichen ein.",
+  "customerWishMessage": "Gib hier deine Nachricht an uns ein.",
+  "customerReference": "Dein Zeichen",
+  "customerReferencePlaceholder": "Gib hier dein Zeichen ein.",
   "CookieBar": {
     "Accept All": "Alles akzeptieren",
     "Accept Selection": "Auswahl akzeptieren",
@@ -15,7 +15,7 @@
     "Show less": "Weniger anzeigen",
     "about": {
       "description": "Wir verwenden Cookies und ähnliche Technologien auf unserer Website und verarbeiten personenbezogene Daten von Besucher:innen unserer Webseite (z.B. IP-Adresse), um z.B. Inhalte zu personalisieren, Medien von Drittanbietern einzubinden oder Zugriffe auf unsere Website zu analysieren. Die Datenverarbeitung erfolgt erst durch gesetzte Cookies. Wir teilen diese Daten mit Dritten, die wir in den Einstellungen benennen. Die Datenverarbeitung kann mit Einwilligung oder aufgrund eines berechtigten Interesses erfolgen. Die Zustimmung kann erteilt oder abgelehnt werden. Es besteht das Recht, nicht einzuwilligen und die Einwilligung zu einem späteren Zeitpunkt zu ändern oder zu widerrufen. Beachten Sie unser {legal} und weitere Hinweise zur Verwendung personenbezogener Daten in unserer {policy}.",
-      "label": "Ihre Privatsphäre ist uns wichtig"
+      "label": "Deine Privatsphäre ist uns wichtig"
     },
     "essentials": {
       "cookies": {
@@ -95,8 +95,8 @@
         "passwordChange": "Passwort ändern",
         "passwordHelp": "Mindestens 8 Zeichen lang und muss mindestens einen Buchstaben und eine Zahl enthalten",
         "passwordsDoNotMatch": "Die Passwörter stimmen nicht überein.",
-        "yourName": "Ihr Name",
-        "yourPassword": "Ihr Passwort"
+        "yourName": "Dein Name",
+        "yourPassword": "Dein Passwort"
       },
       "section": {
         "billingDetails": "Rechnungsadressen",
@@ -122,7 +122,7 @@
       "heading": "Bestellungen & Retouren",
       "listOfOrders": "Auftragsliste",
       "myOrders": "Meine Bestellungen",
-      "noOrders": "Sie haben noch nicht bei uns eingekauft",
+      "noOrders": "Du hast noch nicht bei uns eingekauft",
       "noOrdersAltText": "Keine Bestellungen",
       "noReturns": "Es sind noch keine Retouren vorhanden.",
       "orderAgain": {
@@ -136,8 +136,8 @@
         "priceDown": "Preis gesenkt",
         "priceUp": "Preis erhöht",
         "stockLimitation": "nur noch {stock} Artikel verfügbar",
-        "subtext": "Sie können die Artikel aus dieser Bestellung erneut kaufen.",
-        "subtextChanges": "Seit Ihrer letzten Bestellung sind Änderungen aufgetreten"
+        "subtext": "Du kannst die Artikel aus dieser Bestellung erneut kaufen.",
+        "subtextChanges": "Seit deiner letzten Bestellung sind Änderungen aufgetreten"
       },
       "orderDate": "Auftragsdatum",
       "orderDetails": {
@@ -177,7 +177,7 @@
       "returnDate": "Retourendatum",
       "returnId": "Retouren-ID",
       "returnsAltText": "Keine Retouren",
-      "returnsDescription": "Sie haben noch keine Artikel zurückgeschickt",
+      "returnsDescription": "Du hast noch keine Artikel zurückgeschickt",
       "returnsHeading": "Retouren",
       "section": {
         "myOrders": "Meine Bestellungen",
@@ -215,17 +215,17 @@
   "asterisk": "*",
   "auth": {
     "login": {
-      "createAccount": "Sie haben noch kein Konto?",
-      "createAccountLater": "Keine Sorge. Sie können nach Ihrer Bestellung ein Konto erstellen",
+      "createAccount": "Du hastnoch kein Konto?",
+      "createAccountLater": "Keine Sorge. Du kannst nach deiner Bestellung ein Konto erstellen",
       "createAccountLinkLabel": "Jetzt anmelden!",
       "forgotPasswordLabel": "Passwort vergessen?",
-      "heading": "In Ihr Konto einloggen",
+      "heading": "In dein Konto einloggen",
       "headingSuccess": "Passwort erfolgreich zurücksetzen",
       "loginAndContinue": "Einloggen und fortfahren",
       "openLoginForm": "Login Form öffnen",
       "rememberMeLabel": "An mich erinnern",
       "submitLabel": "Anmelden",
-      "success": "Sie wurden erfolgreich eingeloggt."
+      "success": "Du wurdest erfolgreich eingeloggt."
     },
     "resetPassword": {
       "title": "Passwort erfolgreich zurücksetzen",
@@ -234,30 +234,30 @@
       "continue": "Weiter",
       "resetPassword": "Passwort zurücksetzen",
       "email": "E-Mail",
-      "emailSent": "Überprüfen Sie Ihre E-Mails: Wir haben Ihnen Anweisungen zum Zurücksetzen Ihres Passworts geschickt.",
+      "emailSent": "Überprüfe deine E-Mails: Wir haben dir Anweisungen zum Zurücksetzen deines Passworts geschickt.",
       "heading": "Passwort vergessen?",
-      "subHeading": "Keine Sorge, wir schicken Ihnen eine Anleitung zum Zurücksetzen Ihres Passworts per E-Mail",
-      "info": "Geben Sie die E-Mail-Adresse ein, die Sie bei der Anmeldung verwendet haben. Wir senden Ihnen einen Link zum Zurücksetzen des Passworts. Mit dem Link können Sie ein neues Passwort für Ihr Konto festlegen.",
-      "thankYou": "Danke, wenn ein Konto mit {0} registriert ist, sollten Sie den Link zum Zurücksetzen des Passworts in Ihrem Posteingang erhalten."
+      "subHeading": "Keine Sorge, wir schicken dir eine Anleitung zum Zurücksetzen deines Passworts per E-Mail",
+      "info": "Gib die E-Mail-Adresse ein, die du bei der Anmeldung verwendet hast. Wir senden dir einen Link zum Zurücksetzen des Passworts. Mit dem Link kannst du ein neues Passwort für dein Konto festlegen.",
+      "thankYou": "Danke, wenn ein Konto mit {0} registriert ist, solltest du den Link zum Zurücksetzen des Passworts in deinem Posteingang erhalten."
     },
     "setNewPassword": {
-      "resetSucceded": "Ihr Passwort wurde erfolgreich zurückgesetzt. Sie sind nun mit Ihrem neuen Passwort authentifiziert.",
+      "resetSucceded": "Dein Passwort wurde erfolgreich zurückgesetzt. Du bist nun mit deinem neuen Passwort authentifiziert.",
       "passwordsNotMatching": "Passwörter stimmen nicht überein",
-      "rememberPassword": "Erinnern Sie sich an Ihr Passwort?",
+      "rememberPassword": "Erinnerst du dich an dein Passwort?",
       "button": "Neues Passwort speichern",
-      "description": "Geben Sie das Passwort ein, das Sie zukünftig für das Anmelden mit Ihrem Konto verwenden möchten.",
+      "description": "Gib das Passwort ein, das du zukünftig für das Anmelden mit deinem Konto verwenden möchtest.",
       "heading": "Passwort zurücksetzen",
       "help": "Zwischen {min} und {max} Zeichen mit einer Mischung aus Buchstaben, Zahlen und Symbolen.",
       "password": "Neues Passwort",
       "repeatPassword": "Neues Passwort wiederholen"
     },
     "signup": {
-      "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+      "alreadyHaveAccount": "Hast du bereits ein Konto?",
       "benefits": {
-        "orderHistory": "Ihre komplette Bestellhistorie an einem Ort",
-        "orderTracking": "Behalten Sie den Überblick über Ihre Bestellungen",
-        "saveAddresses": "Speichern Sie mehrere Adressen",
-        "wishlist": "Speichern Sie Ihre Artikel für später"
+        "orderHistory": "Deine komplette Bestellhistorie an einem Ort",
+        "orderTracking": "Behalte den Überblick über deine Bestellungen",
+        "saveAddresses": "Speichere mehrere Adressen",
+        "wishlist": "Speichere deine Artikel für später"
       },
       "emailAlreadyExists": "Diese E-Mail-Adresse ist bereits registriert.",
       "heading": "Account erstellen",
@@ -269,7 +269,7 @@
       },
       "subheading": "Jetzt registrieren, um großartige Vorteile zu genießen",
       "submitLabel": "Account erstellen",
-      "success": "Ihr Konto wurde erfolgreich erstellt."
+      "success": "Dein Konto wurde erfolgreich erstellt."
     }
   },
   "averageRating": "Durchschnittliche Bewertung",
@@ -280,9 +280,9 @@
   "basedOnratings": "Basierend auf {count} Bewertung(en)",
   "billing": {
     "addButton": "Rechnungsadresse hinzufügen",
-    "description": "Fügen Sie eine Rechnungsadresse hinzu. Sie werden die Rechnung an die oben angegebene E-Mail-Adresse erhalten.",
+    "description": "Füge eine Rechnungsadresse hinzu. Du wirst die Rechnung an die oben angegebene E-Mail-Adresse erhalten.",
     "heading": "Rechnungsadresse",
-    "methodChanged": "Die von Ihnen ausgewählte Zahlungsart ist nicht mehr verfügbar."
+    "methodChanged": "Die von dir ausgewählte Zahlungsart ist nicht mehr verfügbar."
   },
   "billingAddressRequired": "Bitte Rechnungsadresse auswählen.",
   "breadcrumbsDropdownText": "Mehr Breadcrumbs anzeigen",
@@ -333,14 +333,14 @@
   "checkoutPayment": {
     "comingSoon": "Bald verfügbar",
     "creditCard": "Kreditkarte",
-    "payUponInvoice": "Bezahlen Sie per Rechnung",
+    "payUponInvoice": "Bezahle per Rechnung",
     "birthdateLabel": "Geburtsdatum",
-    "birthdateError": "Geben Sie ein gültiges Geburtsdatum ein.",
+    "birthdateError": "Gib dein Geburtsdatum ein.",
     "countrySearch": "Suche nach einem Land",
     "phoneLabel": "Telefonnummer",
-    "phoneError": "Geben Sie eine gültige Telefonnummer ein.",
+    "phoneError": "Gib eine gültige Telefonnummer ein.",
     "heading": "Zahlungsart",
-    "noMethodsAvailable": "Es sind keine Zahlungsarten verfügbar. Bitte kontaktieren Sie den Webshop-Anbieter."
+    "noMethodsAvailable": "Es sind keine Zahlungsarten verfügbar. Bitte kontaktiere den Webshop-Anbieter."
   },
   "checkoutExportDelivery": "Mit der Bestellung nehme ich zur Kenntnis, dass der Versand aus dem Land {shopCountry} in das Zielland {deliveryCountry} erfolgt. Die dortige Mehrwertsteuer, die Verzollungskosten und Zölle sind in der Endsumme der Bestellung nicht inbegriffen und sind Dritten zu bezahlen. Sie gehen zu meinen Lasten.",
   "clear": "Zurücksetzen",
@@ -355,7 +355,7 @@
     "clearAll": "Alles löschen",
     "contact": "Kontakt",
     "contactSend": "Anfrage senden",
-    "contactShopMessage": "Sie haben eine Frage oder ein Anliegen? Dann nehmen Sie mit uns Kontakt auf. Füllen Sie einfach das Formular aus und wir werden Ihre Anfrage schnellstmöglich bearbeiten.",
+    "contactShopMessage": "Du hast eine Frage oder ein Anliegen? Dann nimm mit uns Kontakt auf. Fülle einfach das Formular aus und wir werden deine Anfrage schnellstmöglich bearbeiten.",
     "form": {
       "asterixHint": "markierte Felder sind erforderlich",
       "emailLabel": "E-Mail",
@@ -367,7 +367,7 @@
     },
     "privacyPolicy": "Hiermit bestätige ich, dass ich die {privacyPolicy} gelesen habe.",
     "success": "Nachricht erfolgreich gesendet",
-    "misConfigured": "Unser Kontaktformular ist aufgrund einer fehlenden Konfiguration vorübergehend deaktiviert. Bitte schauen Sie später noch einmal vorbei oder kontaktieren Sie uns über alternative Kontaktmöglichkeiten."
+    "misConfigured": "Unser Kontaktformular ist aufgrund einer fehlenden Konfiguration vorübergehend deaktiviert. Bitte schaue später noch einmal vorbei oder kontaktiere uns über alternative Kontaktmöglichkeiten."
   },
   "contactInfo": {
     "add": "Kontaktinformationen hinzufügen",
@@ -395,7 +395,7 @@
     "name": "Gutschein",
     "pleaseProvideCoupon": "Bitte geben Sie einen gültigen Gutscheincode ein.",
     "remove": "Entfernen",
-    "title": "Haben Sie einen Gutscheincode?"
+    "title": "Hast du einen Gutscheincode?"
   },
   "createCustomerReview": "Bewertung abgeben",
   "currentPage": "Die aktuelle Seite ist {page}",
@@ -418,7 +418,7 @@
     "Reversal Document": "Stornobeleg",
     "Success Confirmation": "Gelangensbestätigung",
     "correctionDocuments": "Korrekturbeleg",
-    "downloadFailed": "Das Herunterladen des Dokuments ist fehlgeschlagen. Bitte versuchen Sie es erneut."
+    "downloadFailed": "Das Herunterladen des Dokuments ist fehlgeschlagen. Bitte versuche es erneut."
   },
   "editAddress": "Adresse bearbeiten",
   "editMode": {
@@ -433,16 +433,16 @@
   },
   "email": "E-Mail",
   "emailConfirmation": {
-    "newsletterOptInMessage": "Ihre E-Mail-Adresse wurde bestätigt.",
-    "newsletterOptInMessageError": "Beim Bestätigen Ihrer E-Mail ist ein Fehler aufgetreten."
+    "newsletterOptInMessage": "Deine E-Mail-Adresse wurde bestätigt.",
+    "newsletterOptInMessageError": "Beim Bestätigen deiner E-Mail ist ein Fehler aufgetreten."
   },
-  "emptyCart": "Ihr Warenkorb ist leer",
+  "emptyCart": "Dein Warenkorb ist leer",
   "emptyCartImgAlt": "Bild eines leeren Warenkorbs",
-  "emptyCartNotification": "Sie haben keine Artikel in Ihrem Warenkorb",
+  "emptyCartNotification": "Du hast keine Artikel in deinem Warenkorb",
   "emptyStateAltText": "Bild, das beschreibt, dass keine Artikel gefunden wurden",
   "emptyStateText": "Wir haben keine Artikel mehr in dieser Kategorie.",
-  "emptyStateText2": "Haben Sie nicht gefunden, was Sie suchen?",
-  "emptyWishlist": "Ihre Wunschliste ist leer",
+  "emptyStateText2": "Hast du nicht gefunden, was du suchst?",
+  "emptyWishlist": "Deine Wunschliste ist leer",
   "error": {
     "accessKeyMailFailed": "Die E-Mail konnte nicht versendet werden, bitte kontaktieren Sie den Shopbetreiber.",
     "accessKeyMailSent": "E-Mail wurde versandt.",
