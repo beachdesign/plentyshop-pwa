@@ -14,7 +14,7 @@
     "Reject All": "Alles ablehnen",
     "Show less": "Weniger anzeigen",
     "about": {
-      "description": "Wir verwenden Cookies und ähnliche Technologien auf unserer Website und verarbeiten personenbezogene Daten von Besucher:innen unserer Webseite (z.B. IP-Adresse), um z.B. Inhalte zu personalisieren, Medien von Drittanbietern einzubinden oder Zugriffe auf unsere Website zu analysieren. Die Datenverarbeitung erfolgt erst durch gesetzte Cookies. Wir teilen diese Daten mit Dritten, die wir in den Einstellungen benennen. Die Datenverarbeitung kann mit Einwilligung oder aufgrund eines berechtigten Interesses erfolgen. Die Zustimmung kann erteilt oder abgelehnt werden. Es besteht das Recht, nicht einzuwilligen und die Einwilligung zu einem späteren Zeitpunkt zu ändern oder zu widerrufen. Beachten Sie unser {legal} und weitere Hinweise zur Verwendung personenbezogener Daten in unserer {policy}.",
+      "description": "Wir verwenden Cookies und ähnliche Technologien auf unserer Website und verarbeiten personenbezogene Daten von Besucher:innen (z.B. IP-Adresse), um Inhalte zu personalisieren, Medien von Drittanbietern einzubinden oder Zugriffe auf unsere Website zu analysieren. Die Datenverarbeitung erfolgt erst durch gesetzte Cookies. Wir teilen diese Daten mit Dritten, die wir in den Einstellungen benennen. Die Datenverarbeitung kann mit Einwilligung oder aufgrund eines berechtigten Interesses erfolgen. Deine Zustimmung kann erteilt oder abgelehnt werden. Du hast das Recht, nicht einzuwilligen und die Einwilligung später zu ändern oder zu widerrufen. Beachte unser {legal} und weitere Hinweise zur Verwendung personenbezogener Daten in unserer {policy}.",
       "label": "Deine Privatsphäre ist uns wichtig"
     },
     "essentials": {
@@ -32,23 +32,23 @@
         "consentCookie": {
           "name": "consent-cookie",
           "provider": "PlentyONE GmbH",
-          "status": "Speichert die Einwilligungsauswahl."
+          "status": "Speichert deine Einwilligungsauswahl."
         },
         "plentyId": {
           "name": "plentyID",
           "provider": "PlentyONE GmbH",
-          "status": "Speichert Informationen zur aktuellen Session, z.B. ob der User eingeloggt ist."
+          "status": "Speichert Informationen zur aktuellen Session, z.B. ob du eingeloggt bist."
         }
       },
       "description": "Essenzielle Cookies ermöglichen grundlegende Funktionen und sind für die einwandfreie Funktion der Website erforderlich.",
       "label": "Essenziell"
     },
     "externalMedia": {
-      "description": "Inhalte von Videoplattformen und Social Media Plattformen werden standardmäßig blockiert. Wenn Cookies von externen Medien akzeptiert werden, bedarf der Zugriff auf diese Inhalte keiner manuellen Zustimmung mehr.",
+      "description": "Inhalte von Videoplattformen und Social Media werden standardmäßig blockiert. Wenn Cookies von externen Medien akzeptiert werden, kann auf diese Inhalte ohne weitere Zustimmung zugegriffen werden.",
       "label": "Externe Medien"
     },
     "functional": {
-      "description": "Diese Cookies ermöglichen, dass die von Nutzern getroffenen Auswahlmöglichkeiten und bevorzugte Einstellungen (z.B. das Deaktivieren der Sprachweiterleitung) gespeichert werden können.",
+      "description": "Diese Cookies speichern deine Auswahlmöglichkeiten und bevorzugte Einstellungen (z.B. das Deaktivieren der Sprachweiterleitung).",
       "label": "Funktional"
     },
     "keys": {
@@ -59,7 +59,7 @@
       "script": "Skript"
     },
     "marketing": {
-      "description": "Marketing-Cookies werden von Drittanbietern und Publishern verwendet, um personalisierte Werbung anzuzeigen. Sie tun dies, indem Sie Besucher über Websites hinweg verfolgen.",
+      "description": "Marketing-Cookies werden verwendet, um personalisierte Werbung anzuzeigen. Sie tun dies, indem sie dich über Websites hinweg verfolgen.",
       "label": "Marketing"
     }
   },
@@ -81,7 +81,7 @@
       "edit": "Bearbeiten",
       "heading": "Kontoeinstellungen",
       "makeDefault": "Als Standard festlegen",
-      "noAddresses": "Es sind noch keine Addresse vorhanden.",
+      "noAddresses": "Es sind noch keine Adressen vorhanden.",
       "personalData": {
         "change": "Ändern",
         "changePassword": "Passwort ändern",
@@ -215,20 +215,20 @@
   "asterisk": "*",
   "auth": {
     "login": {
-      "createAccount": "Du hastnoch kein Konto?",
+      "createAccount": "Du hast noch kein Konto?",
       "createAccountLater": "Keine Sorge. Du kannst nach deiner Bestellung ein Konto erstellen",
       "createAccountLinkLabel": "Jetzt anmelden!",
       "forgotPasswordLabel": "Passwort vergessen?",
       "heading": "In dein Konto einloggen",
-      "headingSuccess": "Passwort erfolgreich zurücksetzen",
+      "headingSuccess": "Passwort erfolgreich zurückgesetzt",
       "loginAndContinue": "Einloggen und fortfahren",
-      "openLoginForm": "Login Form öffnen",
+      "openLoginForm": "Login-Formular öffnen",
       "rememberMeLabel": "An mich erinnern",
       "submitLabel": "Anmelden",
       "success": "Du wurdest erfolgreich eingeloggt."
     },
     "resetPassword": {
-      "title": "Passwort erfolgreich zurücksetzen",
+      "title": "Passwort erfolgreich zurückgesetzt",
       "anotherEmail": "Ich muss eine andere E-Mail-Adresse ausprobieren",
       "backToLogin": "Zurück zum Login",
       "continue": "Weiter",
@@ -241,13 +241,13 @@
       "thankYou": "Danke, wenn ein Konto mit {0} registriert ist, solltest du den Link zum Zurücksetzen des Passworts in deinem Posteingang erhalten."
     },
     "setNewPassword": {
-      "resetSucceded": "Dein Passwort wurde erfolgreich zurückgesetzt. Du bist nun mit deinem neuen Passwort authentifiziert.",
+      "resetSucceded": "Dein Passwort wurde erfolgreich zurückgesetzt. Du bist nun mit deinem neuen Passwort eingeloggt.",
       "passwordsNotMatching": "Passwörter stimmen nicht überein",
       "rememberPassword": "Erinnerst du dich an dein Passwort?",
       "button": "Neues Passwort speichern",
-      "description": "Gib das Passwort ein, das du zukünftig für das Anmelden mit deinem Konto verwenden möchtest.",
+      "description": "Gib das Passwort ein, das du zukünftig zum Einloggen verwenden möchtest.",
       "heading": "Passwort zurücksetzen",
-      "help": "Zwischen {min} und {max} Zeichen mit einer Mischung aus Buchstaben, Zahlen und Symbolen.",
+      "help": "Zwischen {min} und {max} Zeichen, mit einer Mischung aus Buchstaben, Zahlen und Symbolen.",
       "password": "Neues Passwort",
       "repeatPassword": "Neues Passwort wiederholen"
     },
@@ -257,7 +257,7 @@
         "orderHistory": "Deine komplette Bestellhistorie an einem Ort",
         "orderTracking": "Behalte den Überblick über deine Bestellungen",
         "saveAddresses": "Speichere mehrere Adressen",
-        "wishlist": "Speichere deine Artikel für später"
+        "wishlist": "Speichere Artikel für später"
       },
       "emailAlreadyExists": "Diese E-Mail-Adresse ist bereits registriert.",
       "heading": "Account erstellen",
@@ -280,12 +280,12 @@
   "basedOnratings": "Basierend auf {count} Bewertung(en)",
   "billing": {
     "addButton": "Rechnungsadresse hinzufügen",
-    "description": "Füge eine Rechnungsadresse hinzu. Du wirst die Rechnung an die oben angegebene E-Mail-Adresse erhalten.",
+    "description": "Füge eine Rechnungsadresse hinzu. Du erhältst die Rechnung an die oben angegebene E-Mail-Adresse.",
     "heading": "Rechnungsadresse",
-    "methodChanged": "Die von dir ausgewählte Zahlungsart ist nicht mehr verfügbar."
+    "methodChanged": "Die ausgewählte Zahlungsmethode ist nicht mehr verfügbar."
   },
   "billingAddressRequired": "Bitte Rechnungsadresse auswählen.",
-  "breadcrumbsDropdownText": "Mehr Breadcrumbs anzeigen",
+    "breadcrumbsDropdownText": "Mehr Breadcrumbs anzeigen",
   "buy": "Kaufen",
   "cancellationRights": "Widerrufsrecht",
   "cart": "Warenkorb",
@@ -312,7 +312,7 @@
       "subcategories": {
         "contact": "Kontakt",
         "feedback": "Feedback",
-        "helpCenter": "Hilfezentrum",
+            "helpCenter": "Hilfezentrum",
         "securityFraud": "Sicherheit & Missbrauch"
       }
     },
@@ -342,7 +342,7 @@
     "heading": "Zahlungsart",
     "noMethodsAvailable": "Es sind keine Zahlungsarten verfügbar. Bitte kontaktiere den Webshop-Anbieter."
   },
-  "checkoutExportDelivery": "Mit der Bestellung nehme ich zur Kenntnis, dass der Versand aus dem Land {shopCountry} in das Zielland {deliveryCountry} erfolgt. Die dortige Mehrwertsteuer, die Verzollungskosten und Zölle sind in der Endsumme der Bestellung nicht inbegriffen und sind Dritten zu bezahlen. Sie gehen zu meinen Lasten.",
+  "checkoutExportDelivery": "Mit der Bestellung nimmst du zur Kenntnis, dass der Versand aus dem Land {shopCountry} in das Zielland {deliveryCountry} erfolgt. Die dortige Mehrwertsteuer, die Verzollungskosten und Zölle sind in der Endsumme der Bestellung nicht inbegriffen und sind Dritten zu bezahlen. Sie gehen zu deinen Lasten.",
   "clear": "Zurücksetzen",
   "clearFilters": "Alle Filter löschen",
   "closeDialog": "Dialogfenster schließen",
@@ -355,26 +355,26 @@
     "clearAll": "Alles löschen",
     "contact": "Kontakt",
     "contactSend": "Anfrage senden",
-    "contactShopMessage": "Du hast eine Frage oder ein Anliegen? Dann nimm mit uns Kontakt auf. Fülle einfach das Formular aus und wir werden deine Anfrage schnellstmöglich bearbeiten.",
+    "contactShopMessage": "Du hast eine Frage oder ein Anliegen? Dann nimm Kontakt mit uns auf. Fülle einfach das Formular aus und wir bearbeiten deine Anfrage so schnell wie möglich.",
     "form": {
       "asterixHint": "markierte Felder sind erforderlich",
       "emailLabel": "E-Mail",
       "message": "Nachricht",
-      "message-placeholder": "Ihre Nachricht",
+      "message-placeholder": "Deine Nachricht",
       "nameLabel": "Name",
       "order-id": "Auftrags-ID",
       "subjectLabel": "Betreff"
     },
     "privacyPolicy": "Hiermit bestätige ich, dass ich die {privacyPolicy} gelesen habe.",
     "success": "Nachricht erfolgreich gesendet",
-    "misConfigured": "Unser Kontaktformular ist aufgrund einer fehlenden Konfiguration vorübergehend deaktiviert. Bitte schaue später noch einmal vorbei oder kontaktiere uns über alternative Kontaktmöglichkeiten."
+    "misConfigured": "Unser Kontaktformular ist aufgrund einer fehlenden Konfiguration vorübergehend deaktiviert. Bitte schau später noch einmal vorbei oder kontaktiere uns über alternative Kontaktmöglichkeiten."
   },
   "contactInfo": {
     "add": "Kontaktinformationen hinzufügen",
     "cancel": "Zurücksetzen",
     "clear": "Löschen",
     "clearAll": "Alles löschen",
-    "description": "Fügen Sie Ihre E-Mail-Adresse hinzu.",
+    "description": "Füge deine E-Mail-Adresse hinzu.",
     "edit": "Bearbeiten",
     "email": "E-Mail",
     "heading": "Kontaktinformationen",
@@ -393,7 +393,7 @@
     "couponRemoved": "Der Gutschein wurde erfolgreich entfernt.",
     "enterCode": "Gutschein-Code eingeben",
     "name": "Gutschein",
-    "pleaseProvideCoupon": "Bitte geben Sie einen gültigen Gutscheincode ein.",
+    "pleaseProvideCoupon": "Bitte gib einen gültigen Gutscheincode ein.",
     "remove": "Entfernen",
     "title": "Hast du einen Gutscheincode?"
   },
@@ -444,7 +444,7 @@
   "emptyStateText2": "Hast du nicht gefunden, was du suchst?",
   "emptyWishlist": "Deine Wunschliste ist leer",
   "error": {
-    "accessKeyMailFailed": "Die E-Mail konnte nicht versendet werden, bitte kontaktieren Sie den Shopbetreiber.",
+    "accessKeyMailFailed": "Die E-Mail konnte nicht versendet werden, bitte kontaktiere den Shopbetreiber.",
     "accessKeyMailSent": "E-Mail wurde versandt.",
     "consentReCaptchaCookieNotSet": "Das reCAPTCHA-Script wurde nicht akzeptiert. reCAPTCHA kann nicht ausgeführt werden. Dadurch können ggf. Formulare nicht versendet werden.",
     "couponAlreadyUsedOrInvalidCouponCode": "Der Gutschein wurde bereits verwendet oder ist ungültig.",
@@ -453,69 +453,69 @@
     "couponCampaignNoWebstoreIdGiven": "Der Gutschein konnte nicht eingelöst werden. Keine Mandant-ID übergeben.",
     "couponCampaignWrongWebstoreId": "Der Gutschein konnte nicht eingelöst werden. Falscher Mandant.",
     "couponExpired": "Der Gutschein ist leider abgelaufen.",
-    "couponMinOrderValueNotReached": "Der Gutschein wurde leider wieder entfernt, da der hierfür nötige Warenwert unterschritten wurde. Bitte geben Sie den Code erneut ein, wenn der geforderte Warenwert erreicht ist.",
+    "couponMinOrderValueNotReached": "Der Gutschein wurde leider wieder entfernt, da der hierfür nötige Warenwert unterschritten wurde. Bitte gib den Code erneut ein, wenn der geforderte Warenwert erreicht ist.",
     "couponNoCustomerGroupActivated": "Der Gutschein konnte nicht eingelöst werden. Keine Kundenklasse aktiviert.",
     "couponNoCustomerTypeActivated": "Der Gutschein konnte nicht eingelöst werden. Kein Kundentyp aktiviert.",
     "couponNoCustomerTypeProvided": "Der Gutschein konnte nicht eingelöst werden. Kundentyp nicht übergeben.",
     "couponNoMatchingItemInBasket": "Der Gutschein wurde leider wieder entfernt, da kein Artikel im Warenkorb für diesen Gutschein freigeschaltet wurde.",
     "couponNoOpenAmount": "Der Gutschein wurde bereits vollständig eingelöst.",
-    "couponOnlyForExistingCustomers": "Der Gutschein kann nur von Bestandskunden eingelöst werden.",
-    "couponOnlyForNewCustomers": "Der Gutschein kann nur von Neukunden eingelöst werden.",
-    "couponOnlySingleUsage": "Diesen Gutschein kann nicht für Abo-Artikel eingelöst werden.",
+    "couponOnlyForExistingCustomers": "Der Gutschein kann nur von Bestandskund:innen eingelöst werden.",
+    "couponOnlyForNewCustomers": "Der Gutschein kann nur von Neukund:innen eingelöst werden.",
+    "couponOnlySingleUsage": "Dieser Gutschein kann nicht für Abo-Artikel eingelöst werden.",
     "couponOnlySubscription": "Der Gutschein kann nur für Abo-Artikel eingelöst werden.",
     "couponPromotionRequired": "Die Variante des Artikels kann nur gekauft werden, wenn ein Aktionsgutschein eingelöst wird.",
     "couponRemoveFailure": "Der Gutschein konnte nicht entfernt werden.",
-    "couponWrongCustomerGroup": "Der Gutschein kann nur von Kunden mit einer anderen Kundenklasse eingelöst werden.",
-    "couponWrongCustomerType": "Der Gutschein kann nur von Kunden mit einem anderen Kundentyp eingelöst werden.",
+    "couponWrongCustomerGroup": "Der Gutschein kann nur von Kund:innen mit einer anderen Kundenklasse eingelöst werden.",
+    "couponWrongCustomerType": "Der Gutschein kann nur von Kund:innen mit einem anderen Kundentyp eingelöst werden.",
     "couponnotUsableForSpecialOffer": "Der Gutschein konnte nicht eingelöst werden. Gutscheine können nicht für Sonderangebotsartikel verwendet werden.",
-    "csrfTokenMismatch": "Sie wurden aus Sicherheitsgründen abgemeldet. Sie werden zur Login-Seite weitergeleitet.",
+    "csrfTokenMismatch": "Du wurdest aus Sicherheitsgründen abgemeldet. Du wirst zur Login-Seite weitergeleitet.",
     "errorActionIsNotExecuted": "Die Aktion konnte nicht ausgeführt werden.",
     "errorBasketItemMaximumQuantityReachedForItem": "Die maximale Bestellmenge dieses Artikels wurde überschritten.",
     "errorBasketItemMaximumQuantityReachedForVariation": "Die maximale Bestellmenge dieser Variante wurde überschritten.",
     "errorBasketItemMinimumQuantityNotReachedForVariation": "Die Mindestbestellmenge dieser Variante wurde nicht erreicht.",
     "errorBasketItemNotEnoughStockForVariation": "Die gewählte Menge konnte nicht in den Warenkorb gelegt werden, da sie den verfügbaren Warenbestand übersteigt. :stock sind zur Zeit auf Lager.",
     "errorBasketItemVariationNotFound": "Die Variante ist nicht verfügbar.",
-    "errorCreateOrderRetryTimeNotReached": "Beim Anlegen des Auftrags ist ein Fehler aufgetreten. Bitte versuchen Sie es in 30 Sekunden erneut.",
+    "errorCreateOrderRetryTimeNotReached": "Beim Anlegen des Auftrags ist ein Fehler aufgetreten. Bitte versuche es in 30 Sekunden erneut.",
     "errorGiftCardReturnQuantity": "Retoure konnte nicht angelegt werden. Alle im Auftrag enthaltenen Gutscheine müssen gemeinsam retourniert werden.",
-    "errorVatNumberValidation": "Die Umsatzsteuer-Identifikationsnummer ist ungültig. Bitte entfernen Sie alle Leer- und Sonderzeichen.",
-    "errorVatService": "Die Umsatzsteuer-Identifikationsnummer konnte nicht bestätigt werden. Bitte wenden Sie sich an den Shop-Betreiber.",
+    "errorVatNumberValidation": "Die Umsatzsteuer-Identifikationsnummer ist ungültig. Bitte entferne alle Leer- und Sonderzeichen.",
+    "errorVatService": "Die Umsatzsteuer-Identifikationsnummer konnte nicht bestätigt werden. Bitte wende dich an den Shop-Betreiber.",
     "errorVatServiceFallback": "Die Umsatzsteuer-Identifikationsnummer konnte nicht bestätigt werden. Der Auftrag wird erneut geprüft.",
-    "newsletterOptInMessage": "Ihre E-Mail-Adresse wurde bestätigt.",
+    "newsletterOptInMessage": "Deine E-Mail-Adresse wurde bestätigt.",
     "newsletterOptOutSuccessMessage": "Die Abmeldung vom Newsletter war erfolgreich.",
     "notificationRemoveCouponMinimumOrderValueIsNotReached": "Der eingelöste Gutschein wurde entfernt. Der Mindestbestellwert wird nicht mehr erreicht.",
-    "notificationsBasketItemsRemoved": "Es wurden Artikel aus Ihrem Warenkorb entfernt, da diese aktuell nicht verfügbar sind.",
-    "notificationsBasketItemsRemovedForContactClass": "Es wurden Artikel aus Ihrem Warenkorb entfernt, da diese nicht für dieses Kundenkonto verfügbar sind.",
-    "notificationsBasketItemsRemovedForCurrency": "Es wurden Artikel aus Ihrem Warenkorb entfernt, da diese nicht in der ausgewählten Währung verfügbar sind.",
-    "notificationsBasketItemsRemovedForLanguage": "Es wurden Artikel aus Ihrem Warenkorb entfernt, da diese nicht in der ausgewählten Sprache verfügbar sind.",
-    "notificationsBasketItemsRemovedForShippingCountry": "Es wurden Artikel aus Ihrem Warenkorb entfernt, da diese nicht für das ausgewählte Lieferland verfügbar sind.",
-    "notificationsCalculateShippingFailed": "Bei der Versandkostenberechnung kam es zu einem Fehler. Bitte benachrichtigen Sie den Betreiber.",
+    "notificationsBasketItemsRemoved": "Es wurden Artikel aus deinem Warenkorb entfernt, da diese aktuell nicht verfügbar sind.",
+    "notificationsBasketItemsRemovedForContactClass": "Es wurden Artikel aus deinem Warenkorb entfernt, da diese nicht für dieses Kundenkonto verfügbar sind.",
+    "notificationsBasketItemsRemovedForCurrency": "Es wurden Artikel aus deinem Warenkorb entfernt, da diese nicht in der ausgewählten Währung verfügbar sind.",
+    "notificationsBasketItemsRemovedForLanguage": "Es wurden Artikel aus deinem Warenkorb entfernt, da diese nicht in der ausgewählten Sprache verfügbar sind.",
+    "notificationsBasketItemsRemovedForShippingCountry": "Es wurden Artikel aus deinem Warenkorb entfernt, da diese nicht für das ausgewählte Lieferland verfügbar sind.",
+    "notificationsCalculateShippingFailed": "Bei der Versandkostenberechnung kam es zu einem Fehler. Bitte benachrichtige den Betreiber.",
     "notificationsCheckPassword": "Die Passwörter stimmen nicht überein.",
     "notificationsInvalidResetPasswordUrl": "Die angegebene URL ist ungültig oder abgelaufen.",
     "notificationsItemBundleSplitted": "Artikelpaket wurde aufgeteilt.",
     "notificationsItemNotAdded": "Der Artikel konnte nicht hinzugefügt werden",
     "notificationsItemOutOfStock": "Kein ausreichender Warenbestand vorhanden",
-    "notificationsNoEmailEntered": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "notificationsNoEmailEntered": "Bitte gib eine gültige E-Mail-Adresse ein.",
     "notificationsNotEnoughStockItem": "Die gewählte Menge konnte nicht in den Warenkorb gelegt werden, da sie den verfügbaren Warenbestand übersteigt. :stock sind zur Zeit auf Lager.",
     "notificationsWarningOverselling": "Die gewählte Menge übersteigt den verfügbaren Warenbestand. :stock sind zur Zeit auf Lager; :oversellingAmount werden nachgeliefert.",
     "errorOccured": "Ups! Ein Fehler ist aufgetaucht!",
     "pageNotFound": "Seite nicht gefunden",
     "pageNotFoundTitle": "Wir konnten diese Seite nicht finden.",
-    "pageNotFoundSubtitle": "Es tut uns leid! Benutze die Suche oder die Kategorieauswahl um zu finden, wonach du suchst.",
+    "pageNotFoundSubtitle": "Es tut uns leid! Nutze die Suche oder die Kategorieauswahl, um zu finden, wonach du suchst.",
     "errorPlain": "Fehler"
   },
   "errorMessages": {
     "checkout": {
-      "missingAddress": "Bitte geben Sie Ihre Adresse ein, um mit dem Bezahlvorgang fortzufahren.",
-      "missingBillingAddress": "Bitte geben Sie Ihre Rechnungsadresse ein, um mit dem Bezahlvorgang fortzufahren."
+      "missingAddress": "Bitte gib deine Adresse ein, um mit dem Bezahlvorgang fortzufahren.",
+      "missingBillingAddress": "Bitte gib deine Rechnungsadresse ein, um mit dem Bezahlvorgang fortzufahren."
     },
     "contact": {
       "messageRequired": "Nachricht ist erforderlich.",
       "nameRequired": "Name ist erforderlich.",
       "subjectRequired": "Betreff ist erforderlich.",
-      "termsRequired": "Bitte akzeptieren Sie die Datenschutzbestimmungen",
-      "turnstileRequired": "Bitte aktivieren Sie die Checkbox, um zu bestätigen, dass Sie kein Bot sind."
+      "termsRequired": "Bitte akzeptiere die Datenschutzbestimmungen.",
+      "turnstileRequired": "Bitte aktiviere die Checkbox, um zu bestätigen, dass du kein Bot bist."
     },
-    "decimalNumber": "Geben Sie eine Kommazahl ein.",
+    "decimalNumber": "Gib eine Kommazahl ein.",
     "email": {
       "required": "E-Mail ist erforderlich.",
       "valid": "In diesem Feld muss es sich um eine gültige E-Mail-Adresse handeln."
@@ -523,13 +523,13 @@
     "orderId": {
       "required": "Die Bestellnummer ist erforderlich."
     },
-    "maxCharacters": "Geben Sie maximal {max} Zeichen ein.",
-    "missingOrWrongProperties": "Folgende Felder sind pflicht oder falsch gefüllt:",
+    "maxCharacters": "Gib maximal {max} Zeichen ein.",
+    "missingOrWrongProperties": "Folgende Felder sind Pflicht oder falsch gefüllt:",
     "newsletter": {
       "firstNameRequired": "Vorname ist erforderlich.",
       "lastNameRequired": "Nachname ist erforderlich.",
-      "termsRequired": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
-      "turnstileRequired": "Bitte aktivieren Sie die Checkbox, um zu bestätigen, dass Sie kein Bot sind."
+      "termsRequired": "Bitte akzeptiere die Datenschutzbestimmungen.",
+      "turnstileRequired": "Bitte aktiviere die Checkbox, um zu bestätigen, dass du kein Bot bist."
     },
     "password": {
       "match": "Passwörter stimmen nicht überein.",
@@ -540,9 +540,9 @@
     },
     "editor": {
       "add": {
-        "disabledTooDeeplyNested": "Layouts support a maximum of two levels. Select a content block instead.",
-        "disabledNotCompatibleWithLayouts": "This block can't be placed inside a layout.",
-        "disabledOneInstancePerPage": "You can only have 1 instance of this block type on a page."
+        "disabledTooDeeplyNested": "Layouts unterstützen maximal zwei Ebenen. Wähle stattdessen einen Inhaltsblock aus.",
+        "disabledNotCompatibleWithLayouts": "Dieser Block kann nicht in einem Layout platziert werden.",
+        "disabledOneInstancePerPage": "Du kannst nur 1 Instanz dieses Blocktyps auf einer Seite verwenden."
       },
       "save": {
         "success": "Die Änderungen wurden gespeichert.",
@@ -558,16 +558,16 @@
     },
     "paymentFailed": "Die Zahlung ist fehlgeschlagen. Versuche es bitte erneut.",
     "paymentCancelled": "Die Zahlung wurde abgebrochen. Versuche es bitte erneut.",
-    "pleaseFillOutAllFields": "Bitte füllen Sie alle diese Felder aus.",
+    "pleaseFillOutAllFields": "Bitte fülle alle diese Felder aus.",
     "requiredField": "Dieses Feld ist erforderlich.",
-    "turnstileRequired": "Bitte aktivieren Sie die Checkbox, um zu bestätigen, dass Sie kein Bot sind.",
-    "wholeNumber": "Geben Sie eine ganze Zahl ein."
+    "turnstileRequired": "Bitte aktiviere die Checkbox, um zu bestätigen, dass du kein Bot bist.",
+    "wholeNumber": "Gib eine ganze Zahl ein."
   },
   "estimatedTax": "MwSt.",
   "etaDelivery": "Voraussichtliche Lieferdauer",
   "excludedShipping": "zzgl. {shipping}",
   "failedInfoHeader": "Es tut uns wirklich leid.",
-  "failedInfoMessage": "Ihre Bestellung konnte nicht abgeschlossen werden.",
+  "failedInfoMessage": "Deine Bestellung konnte nicht abgeschlossen werden.",
   "filters": "Filter",
   "form": {
     "addCompany": "+ Firmendaten hinzufügen",
@@ -603,7 +603,7 @@
   },
   "goToCheckout": "Zur Kasse",
   "goToHomepage": "Zur Startseite gehen",
-  "goToPage": "Zur Seite navigieren {page}",
+  "goToPage": "Zur Seite {page} navigieren",
   "googlePay": {
     "paymentInProgress": "Zahlung in Bearbeitung..."
   },
@@ -638,23 +638,23 @@
       "detail1": {
         "alt": "Schritt in Stil - Sonnenbrillen-Kollektion für einen modischen Look",
         "buttonText": "Jetzt entdecken",
-        "description": "Treten Sie stilvoll mit unserer Sonnenbrillenkollektion auf",
-        "subtitle": "Lassen Sie sich inspirieren",
+        "description": "Tritt stilvoll mit unserer Sonnenbrillenkollektion auf",
+        "subtitle": "Lass dich inspirieren",
         "title": "Stilvoll heraustreten"
       },
       "detail2": {
         "alt": "Pack es ein - Entdecke die Outdoor-Welt mit unserer Rucksack-Kollektion",
         "buttonText": "Jetzt entdecken",
-        "description": "Erkunden Sie die große Natur mit unseren Rucksäcken",
-        "subtitle": "Seien Sie aktiv",
-        "title": "Packen Sie Es"
+        "description": "Erkunde die Natur mit unseren Rucksäcken",
+        "subtitle": "Bleib aktiv",
+        "title": "Pack es ein"
       },
       "detail3": {
-        "alt": "Frisch und Kühn - Setzen Sie Akzente mit Farbe in Ihrem Outfit",
+        "alt": "Frisch und kühn - Setze Akzente mit Farbe in deinem Outfit",
         "buttonText": "Jetzt entdecken",
-        "description": "Fügen Sie Ihrem Outfit einen Farbtupfer hinzu",
+        "description": "Füge deinem Outfit einen Farbtupfer hinzu",
         "subtitle": "Neue Kollektion",
-        "title": "Frisch und Kühn"
+        "title": "Frisch und kühn"
       }
     },
     "headPhones": "Neue Wireless Pro Kopfhörer mit räumlichem Audio und ganztägiger Akkulaufzeit",
@@ -705,13 +705,13 @@
     "vn": "Vietnamesisch"
   },
   "languageSelector": "Sprachauswahl öffnen",
-  "legalDetails": "Rechtliche Hinweise – Klicken Sie hier für weitere Informationen",
+  "legalDetails": "Rechtliche Hinweise – klicke hier für weitere Informationen",
   "listSettings": "Listeneinstellungen",
   "loading": "Wird geladen...",
   "loadingReviews": "Kundenrezensionen werden geladen...",
   "loginFastCheckout": "Einloggen, um schneller auszuchecken",
   "lowestPrice": "Niedrigster Preis der letzten 30 Tage: {price}",
-  "manageAddresses": "Verwalten Sie Ihre Adressen",
+  "manageAddresses": "Verwalte deine Adressen",
   "manufacturer": {
     "euResponsibleTabName": "EU Verantwortliche Person",
     "header": "Angaben zum Hersteller",
@@ -735,14 +735,14 @@
   "newsletter": {
     "email": "E-Mail",
     "firstName": "Vorname",
-    "heading": "Abonnieren Sie unseren Newsletter",
-    "info": "Informieren Sie sich über bevorstehende Aktionen und Veranstaltungen. Erhalten Sie Geschenke und Sonderangebote!",
+    "heading": "Abonniere unseren Newsletter",
+    "info": "Bleib über Aktionen und Veranstaltungen informiert und erhalte Geschenke und Sonderangebote!",
     "lastName": "Nachname",
     "policy": "Ich bestätige hiermit, dass ich die {privacyPolicy} gelesen habe. Ich kann meine Einwilligung jederzeit widerrufen.",
     "subscribe": "Newsletter abonnieren",
-    "success": "Vielen Dank für Ihre Anmeldung! Bitte prüfen Sie Ihr E-Mail-Postfach und klicken Sie auf den Bestätigungslink in unserer Nachricht, um den Newsletter zu abonnieren."
+    "success": "Vielen Dank für deine Anmeldung! Bitte prüfe dein E-Mail-Postfach und klicke auf den Bestätigungslink in unserer Nachricht, um den Newsletter zu abonnieren."
   },
-  "next": "Nächste",
+    "next": "Nächste",
   "nextAriaLabel": "Zur nächsten Seite navigieren",
   "noReviews": "Keine Bewertungen",
   "noneExisting": "Keine vorhanden",
@@ -752,9 +752,9 @@
   "offerForm": {
     "acceptOffer": "Angebot annehmen",
     "cancel": "Abbrechen",
-    "declineDialogSubline": "Helfen Sie uns, uns zu verbessern, indem Sie uns mitteilen, warum Sie das Angebot abgelehnt haben.",
+    "declineDialogSubline": "Hilf uns, besser zu werden, indem du uns mitteilst, warum du das Angebot abgelehnt hast.",
     "declineOffer": "Angebot ablehnen",
-    "inputPlaceholder": "Bitte teilen Sie uns Ihre Gründe zur Ablehnung mit...",
+    "inputPlaceholder": "Bitte teile uns deine Gründe zur Ablehnung mit...",
     "missingEmail": "Es wurde keine E-Mail-Adresse hinterlegt.",
     "offer": "Angebot",
     "offerValidUntil": "Angebot gültig bis: {date}"
@@ -765,9 +765,9 @@
   "orderConfirmation": {
     "trackingOrder": "Bestellung nachverfolgen",
     "confirmationSendTo": "Eine Bestätigung mit allen Details wurde an {email} gesendet",
-    "createAccountForBenefits": "Erstellen Sie ein Konto, um alle Vorteile zu nutzen!",
+    "createAccountForBenefits": "Erstelle ein Konto, um alle Vorteile zu nutzen!",
     "sameAsShippingAddress": "Entspricht der Lieferadresse",
-    "saveOrderToAccount": "Speichern Sie diese Bestellung in Ihrem Konto",
+    "saveOrderToAccount": "Speichere diese Bestellung in deinem Konto",
     "shipping": "Versandkosten",
     "signUp": "Registrieren",
     "subTotal": "Zwischensumme",
@@ -779,10 +779,10 @@
     "overpaid": "Überzahlt",
     "partlyPaid": "Teilweise bezahlt",
     "prepaid": "Im Voraus bezahlt",
-    "unknown": "Fehler beim abrufen des Zahlungsstatus",
+    "unknown": "Fehler beim Abrufen des Zahlungsstatus",
     "unpaid": "Nicht bezahlt"
   },
-  "orderErrorMessage": "Etwas ging schief. Versuchen Sie es später noch einmal.",
+  "orderErrorMessage": "Etwas ist schiefgelaufen. Versuche es später noch einmal.",
   "orderErrorProvider": "Unbekannte Antwort des Zahlungsanbieters: {paymentType}",
   "orderNumber": "Auftrags-ID",
   "orderProperties": {
@@ -791,12 +791,12 @@
     "noSelection": "Keine Auswahl",
     "select": "Auswählen",
     "upload": {
-      "acceptedFormats": "Akzeptiere Dateiformate",
+      "acceptedFormats": "Akzeptierte Dateiformate",
       "dragAndDropFileHereOrUpload": "Datei hierher ziehen und ablegen oder {uploadFile}",
       "maximumFileSize": "Erlaubte Dateigröße",
       "orderPropertyTypeFile": "Typ: Datei",
       "unSupportedFileType": "Die hochgeladene Datei wird nicht unterstützt",
-      "uploadError": "Die Datei konnte nicht hochgeladen werden. Prüfen Sie die maximal erlaubte Dateigröße und das Dateiformat.",
+      "uploadError": "Die Datei konnte nicht hochgeladen werden. Prüfe die maximal erlaubte Dateigröße und das Dateiformat.",
       "uploadFile": "Datei hochladen",
       "uploaded": "hochgeladen",
       "uploading": "lädt hoch"
@@ -807,39 +807,39 @@
       "plus": "zzgl."
     }
   },
-  "orderSuccessfulImageAlt": "Bild, das erklärt das die Bestellung erfolgreich war",
+  "orderSuccessfulImageAlt": "Bild, das erklärt, dass die Bestellung erfolgreich war",
   "orderSummary": "Bestellübersicht",
   "outOfStock": "Nicht auf Lager",
   "pagination": "Paginierte Navigation",
   "passwordVisibilty": "Sichtbarkeit des Passworts",
   "paypal": {
-    "errorMessageCreditCard": "Die eingegebenen Daten sind ungültig. Überprüfen Sie die Felder Kartennummer, Kartenprüfnummer (CVV), Ablaufdatum.",
+    "errorMessageCreditCard": "Die eingegebenen Daten sind ungültig. Überprüfe Kartennummer, Kartenprüfnummer (CVV) und Ablaufdatum.",
     "unbrandedCancel": "Abbrechen",
     "unbrandedCardNumber": "Kartennummer",
     "unbrandedCvv": "Kartenprüfnummer",
     "unbrandedExpirationDate": "Ablaufdatum",
     "unbrandedNameOnCard": "Karteninhaber",
     "unbrandedPay": "Bezahlen",
-    "invalidOrder": "Die Bestellung konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
-    "puiBankDataAvailable": "Überweisen Sie den Betrag an die angegebenen Bankdaten. Sie können die Bankdaten zudem auch Ihrer Rechnung entnehmen.",
-    "puiBankDataNotAvailable": "Die Bankdaten für die Überweisung werden abgerufen und stehen in Kürze zur Verfügung. Die Daten sind dann hier verfügbar oder können Ihrer Rechnung entnommen werden.",
+    "invalidOrder": "Die Bestellung konnte nicht abgeschlossen werden. Bitte versuche es erneut.",
+    "puiBankDataAvailable": "Überweise den Betrag an die angegebenen Bankdaten. Du kannst die Bankdaten zudem auch deiner Rechnung entnehmen.",
+    "puiBankDataNotAvailable": "Die Bankdaten für die Überweisung werden abgerufen und stehen in Kürze zur Verfügung. Die Daten sind dann hier verfügbar oder können deiner Rechnung entnommen werden.",
     "puiDesignedUse": "Verwendungszweck",
-    "expressNotAvailable": "PayPal ist für das Lieferland nicht verfügbar. Bitte passen Sie Ihre Adresse entsprechend an oder gehen Sie zur Kasse, um die Bestellung mit einem anderen Zahlungsanbieter abzuschließen."
+    "expressNotAvailable": "PayPal ist für das Lieferland nicht verfügbar. Bitte passe deine Adresse entsprechend an oder gehe zur Kasse, um die Bestellung mit einem anderen Zahlungsanbieter abzuschließen."
   },
   "perPage": "Pro Seite",
   "phone": "Telefonnummer",
   "pickSavedAddress": "Gespeicherte Adressen",
   "closePickSavedAddress": "Adressauswahl schließen",
-  "pickSavedAddressSubtitle": "Wählen Sie eine Ihrer gespeicherten Adressen oder erstellen Sie eine Neue",
+  "pickSavedAddressSubtitle": "Wähle eine deiner gespeicherten Adressen oder erstelle eine neue",
   "placeOrder": "Bestellung aufgeben und bezahlen",
   "pleaseSelect": "Bitte wählen",
   "prev": "Vorherige",
   "prevAriaLabel": "Zur vorherigen Seite navigieren",
   "privacyPolicy": "Datenschutzerklärung",
   "privacyPolicyRequired": "Bitte die Checkbox zur Datenschutzerklärung bestätigen.",
-  "procentageSavings": "Sie sparen {percent} % mit diesem Bundle",
+  "procentageSavings": "Du sparst {percent} % mit diesem Bundle",
   "productAttributes": {
-    "notValidVariation": "Bitte wählen Sie eine gültige Variante.",
+    "notValidVariation": "Bitte wähle eine gültige Variante.",
     "productNameMissing": "Artikelname fehlt",
     "seeAvailableOptions": "Verfügbare Optionen anzeigen"
   },
@@ -850,7 +850,7 @@
   "quantitySelectorDecrease": "Menge reduzieren",
   "quantitySelectorIncrease": "Menge erhöhen",
   "quickCheckout": {
-    "cartContains": "Ihr Warenkorb enthält {count} Artikel",
+    "cartContains": "Dein Warenkorb enthält {count} Artikel",
     "checkYourCart": "Warenkorb prüfen",
     "heading": "Zum Warenkorb hinzugefügt",
     "subTotal": "Zwischensumme",
@@ -865,7 +865,7 @@
   "resultsFor": "Ergebnisse für \"{phrase}\"",
   "returnNumber": "Rückgabe-ID",
   "returns": {
-    "areYouSure": "Sind Sie sicher, dass Sie diese Artikel zurückgeben möchten?",
+    "areYouSure": "Bist du sicher, dass du diese Artikel zurückgeben möchtest?",
     "cancel": "Abbrechen",
     "commentOptional": "Kommentar (optional)",
     "confirmReturn": "Rückgabe bestätigen",
@@ -879,17 +879,17 @@
     "returnNumber": "Rücksendenummer",
     "returnReason": "Rücksendegrund",
     "selectAll": "Alles auswählen",
-    "selectQuantities": "Bitte wählen Sie die Rücksendemengen aus",
-    "selectReason": "Bitte wählen Sie den Rückgabegrund aus",
+    "selectQuantities": "Bitte wähle die Rücksendemengen aus",
+    "selectReason": "Bitte wähle den Rückgabegrund aus",
     "selectReturnReason": "Rücksendegrund auswählen",
-    "successConfirmationMessage": "Wir haben Ihre Retoure erfasst. Wir informieren Sie über den weiteren Ablauf.",
-    "tellUsMore": "Erzählen Sie uns mehr darüber, warum Sie diese Artikel zurückgeben möchten.."
+    "successConfirmationMessage": "Wir haben deine Retoure erfasst. Wir informieren dich über den weiteren Ablauf.",
+    "tellUsMore": "Erzähle uns mehr darüber, warum du diese Artikel zurückgeben möchtest."
   },
   "review": {
     "anonymous": "Anonym",
     "answer": "Antworten",
-    "answerAreYouSure": "Sind Sie sicher, dass Sie die Antwort löschen möchten?",
-    "areYouSure": "Sind Sie sicher, dass Sie die Bewertung löschen möchten?",
+    "answerAreYouSure": "Bist du sicher, dass du die Antwort löschen möchtest?",
+    "areYouSure": "Bist du sicher, dass du die Bewertung löschen möchtest?",
     "cancel": "Abbrechen",
     "createAnswerFormTitle": "Eine Antwort abgeben",
     "createReviewFormTitle": "Bewertung schreiben",
@@ -901,10 +901,10 @@
     "editReviewFormTitle": "Bewertung bearbeiten",
     "hideAnswers": "Antworten ausblenden",
     "notification": {
-      "answerSuccess": "Ihre Antwort wurde übermittelt.",
-      "success": "Ihre Bewertung wurde übermittelt."
+      "answerSuccess": "Deine Antwort wurde übermittelt.",
+      "success": "Deine Bewertung wurde übermittelt."
     },
-    "reviewAuthor": "Ihr Name (optional)",
+    "reviewAuthor": "Dein Name (optional)",
     "reviewText": "Artikelbewertung (optional)",
     "saveAnswer": "Antwort abgeben",
     "showAnswers": "Antworten anzeigen",
@@ -913,14 +913,14 @@
     "tooltipVisibilityOff": "Diese Bewertung wird derzeit überprüft",
     "tooltipVisibilityOn": "Diese Bewertung ist sichtbar",
     "validation": {
-      "ratingRequired": "Rating zu Bewertung hinzufügen.",
+      "ratingRequired": "Bitte eine Wertung zur Bewertung hinzufügen.",
       "textareaMaxLength": "Die maximal zulässige Länge beträgt 500 Zeichen.",
-      "textareaRequired": "Nachricht für Bewertung eingeben.",
-      "titleRequired": "Titel für Bewertung eingeben."
+      "textareaRequired": "Bitte einen Text für die Bewertung eingeben.",
+      "titleRequired": "Bitte einen Titel für die Bewertung eingeben."
     },
     "verifiedPurchase": "Verifizierter Kauf",
-    "yourAnswer": "Ihre Antwort",
-    "yourRating": "Ihre Wertung:"
+    "yourAnswer": "Deine Antwort",
+    "yourRating": "Deine Wertung:"
   },
   "reviewsCount": "{Anzahl} Bewertungen",
   "sale": "Verkauf",
@@ -933,11 +933,11 @@
   "resetSearch": "Suche zurücksetzen",
   "shipping": {
     "addButton": "Lieferadresse hinzufügen",
-    "description": "Fügen Sie eine Lieferadresse hinzu, um Versandinformationen anzuzeigen.",
+    "description": "Füge eine Lieferadresse hinzu, um Versandinformationen anzuzeigen.",
     "heading": "Lieferadresse",
-    "methodChanged": "Die von Ihnen gewählte Versandart ist nicht mehr verfügbar.",
+    "methodChanged": "Die von dir gewählte Versandart ist nicht mehr verfügbar.",
     "noShippingMessage": "Keine Versandinformationen verfügbar",
-    "noShippingMethodsNoAddress": "Tragen Sie Ihre Lieferadresse ein, um die passenden Versandarten zu sehen."
+    "noShippingMethodsNoAddress": "Trage deine Lieferadresse ein, um passende Versandarten zu sehen."
   },
   "shippingAddress": "Lieferadresse",
   "shippingAddressRequired": "Bitte Lieferadresse auswählen.",
@@ -945,8 +945,8 @@
     "description": "Nicht verfügbar, solange keine Lieferadresse angegeben wird.",
     "free": "Kostenlos",
     "heading": "Versandart",
-    "noMethodsAvailable": "Es sind keine Versandarten verfügbar. Bitte kontaktieren Sie den Webshop-Anbieter.",
-    "showDataPrivacyAgreementHint": "Ich bin damit einverstanden, dass meine E-Mail-Adresse bzw. meine Telefonnummer an {parcelServiceInformation} weitergegeben wird, damit der Paketdienstleister vor der Zustellung der Ware zum Zwecke der Abstimmung eines Liefertermins per E-Mail oder Telefon Kontakt mit mir aufnehmen bzw. Statusinformationen zur Sendungszustellung übermitteln kann. Meine diesbezüglich erteilte Einwilligung kann ich jederzeit widerrufen",
+    "noMethodsAvailable": "Es sind keine Versandarten verfügbar. Bitte kontaktiere den Webshop-Anbieter.",
+    "showDataPrivacyAgreementHint": "Ich bin damit einverstanden, dass meine E-Mail-Adresse bzw. meine Telefonnummer an {parcelServiceInformation} weitergegeben wird, damit der Paketdienstleister vor der Zustellung der Ware zum Zwecke der Abstimmung eines Liefertermins per E-Mail oder Telefon Kontakt mit mir aufnehmen bzw. Statusinformationen zur Sendungszustellung übermitteln kann. Meine diesbezüglich erteilte Einwilligung kann ich jederzeit widerrufen.",
     "maxDeliveryDays": "Lieferung in {days} Tagen"
   },
   "showAllReviews": "Alle Bewertungen anzeigen",
@@ -959,11 +959,11 @@
   "softLogin": {
     "check": "Prüfen",
     "fullName": "Nachname oder Firmenname",
-    "titleFullName": "Bitte geben Sie den Nachnamen oder den Firmennamen ein, der am Auftrag hinterlegt ist, um die Auftragsdetails einzusehen.",
-    "titleLogin": "Melden Sie sich bei Ihrem Konto an, um auf Ihre Bestellung zuzugreifen",
-    "titlePostcode": "Bitte geben Sie die Postleitzahl einer Adresse ein, die am Auftrag hinterlegt ist, um die Auftragsdetails einzusehen."
+    "titleFullName": "Bitte gib den Nachnamen oder den Firmennamen ein, der am Auftrag hinterlegt ist, um die Auftragsdetails einzusehen.",
+    "titleLogin": "Melde dich bei deinem Konto an, um auf deine Bestellung zuzugreifen",
+    "titlePostcode": "Bitte gib die Postleitzahl einer Adresse ein, die am Auftrag hinterlegt ist, um die Auftragsdetails einzusehen."
   },
-  "somethingWentWrongImageAlt": "Bild, das erklärt das etwas schief gegangen ist",
+  "somethingWentWrongImageAlt": "Bild, das erklärt, dass etwas schief gegangen ist",
   "sortingAndPagination": {
     "recommendedSorting": {
       "title": "Empfohlene Sortierung",
@@ -1059,7 +1059,7 @@
     "necessary": "Essenziell",
     "marketing": "Marketing (empfohlen)"
   },
-  "sessionLifetime": {
+    "sessionLifetime": {
     "untilBrowserClosed": "Bis der Browser geschlossen wird",
     "oneHour": "Eine Stunde, auch wenn der Browser geschlossen wird",
     "oneDay": "Ein Tag, auch wenn der Browser geschlossen wird",
@@ -1068,7 +1068,7 @@
   "storefrontError": {
     "offer": {
       "expired": "Dieses Angebot ist abgelaufen.",
-      "openUnauthorized": "Sie sind nicht berechtigt, dieses Angebot zu öffnen.",
+      "openUnauthorized": "Du bist nicht berechtigt, dieses Angebot zu öffnen.",
       "itemOutOfStock": "Mindestens ein Artikel des Angebots ist nicht mehr auf Lager.",
       "alreadyTaken": "Dieses Angebot wurde bereits verwendet und kann nicht erneut verwendet werden."
     },
@@ -1077,7 +1077,7 @@
       "deleteFailed": "Das Löschen der Adresse ist fehlgeschlagen.",
       "validationFailed": "Die Adresse ist ungültig.",
       "vatInvalid": "Die USt-IdNr. ist ungültig.",
-      "vatServerBusy": "Die Umsatzsteuer-Identifikationsnummer konnte nicht bestätigt werden. Bitte wenden Sie sich an den Shop-Betreiber.",
+      "vatServerBusy": "Die Umsatzsteuer-Identifikationsnummer konnte nicht bestätigt werden. Bitte wende dich an den Shop-Betreiber.",
       "vatServerFallback": "Die Umsatzsteuer-Identifikationsnummer konnte nicht bestätigt werden. Der Auftrag wird erneut geprüft."
     },
     "cart": {
@@ -1094,7 +1094,7 @@
       "reachedMaximumQuantity": "Die maximale Bestellmenge dieses Artikels wurde überschritten."
     },
     "contact": {
-      "emailAlreadyExists": "Die E-Mail Adresse existiert bereits.",
+      "emailAlreadyExists": "Die E-Mail-Adresse existiert bereits.",
       "missingContactOrUnexpectedFormat": "Fehlende Kontaktangaben oder unerwartetes Format.",
       "unexpectedAddressFormat": "Unerwartetes Adressformat.",
       "passwordInvalid": "Das Passwort entspricht nicht den erforderlichen Sicherheitsstandards.",
@@ -1121,32 +1121,32 @@
     "order": {
       "additionalAuthRequiredName": "Für diese Bestellung ist eine Bestätigung des verwendeten Nachnamens erforderlich.",
       "additionalAuthenticationRequired": "Für diese Bestellung ist eine zusätzliche Authentifizierung notwendig.",
-      "additionalAuthenticationRequiredLogin": "Für diese Bestellung ist das erneute einloggen notwendig.",
-      "additionalAuthenticationRequiredPostcode": "Für diese Bestellung ist die Bestätigung der verwendenten Postleitzahl notwendig.",
+      "additionalAuthenticationRequiredLogin": "Für diese Bestellung ist das erneute Einloggen notwendig.",
+      "additionalAuthenticationRequiredPostcode": "Für diese Bestellung ist die Bestätigung der verwendeten Postleitzahl notwendig.",
       "createFailed": "Die Bestellung konnte nicht erstellt werden.",
       "loadOrdersFailed": "Die Bestellungen konnten nicht geladen werden.",
-      "migrateUnauthorized": "Die Bestellung konnte nicht zu Ihrem Account hinzugefügt werden.",
+      "migrateUnauthorized": "Die Bestellung konnte nicht zu deinem Account hinzugefügt werden.",
       "notFound": "Die Bestellung existiert nicht.",
       "softLoginFailed": "Die angegebenen Daten sind ungültig.",
       "assignPaymentFailed": "Die Zahlung konnte nicht zugewiesen werden."
     },
     "turnstile": {
-      "invalid": "Verifizierung fehlgeschlagen. Bitte versuchen Sie es in ein paar Minuten erneut.",
-      "misConfigured": "Die Verifizierung ist derzeit nicht verfügbar. Bitte wenden Sie sich an den Website-Administrator."
+      "invalid": "Verifizierung fehlgeschlagen. Bitte versuche es in ein paar Minuten erneut.",
+      "misConfigured": "Die Verifizierung ist derzeit nicht verfügbar. Bitte wende dich an den Website-Administrator."
     },
     "security": {
-      "invalidCsrfToken": "Aus Sicherheitsgründen wurde diese Aktion verweigert. Bitte laden Sie die Seite neu und versuchen Sie es erneut.",
-      "tooManyRequests": "Es wurden zu viele Anfragen gesendet. Bitte warten Sie einen Moment und versuchen Sie es dann erneut."
+      "invalidCsrfToken": "Aus Sicherheitsgründen wurde diese Aktion verweigert. Bitte lade die Seite neu und versuche es erneut.",
+      "tooManyRequests": "Es wurden zu viele Anfragen gesendet. Bitte warte einen Moment und versuche es dann erneut."
     },
     "unknownError": "Es ist ein unbekannter Fehler aufgetreten."
   },
   "reloadPage": "Neu laden",
-  "successInfoMessage": "Ihre Bestellung wurde erfolgreich abgeschlossen.",
-  "successInfoOrderHeader": "Vielen Dank für Ihre Bestellung!",
-  "successInfoReturnHeader": "Vielen Dank für Ihre Retoure!",
+  "successInfoMessage": "Deine Bestellung wurde erfolgreich abgeschlossen.",
+  "successInfoOrderHeader": "Vielen Dank für deine Bestellung!",
+  "successInfoReturnHeader": "Vielen Dank für deine Retoure!",
   "technicalData": "Technische Daten",
   "termsAndConditions": "AGB",
-  "termsInfo": "Es gelten unsere {terms}. Bitte nehmen Sie unser {cancellationRights} und {privacyPolicy} zur Kenntnis. *",
+  "termsInfo": "Es gelten unsere {terms}. Bitte nimm unser {cancellationRights} und unsere {privacyPolicy} zur Kenntnis. *",
   "termsRequired": "Bitte die Checkbox zu AGB, Widerrufsrecht und Datenschutzerklärung bestätigen.",
   "tomorrow": "Morgen",
   "total": "Gesamt",
@@ -1168,22 +1168,22 @@
   "reloadPWA": {
     "newVersionAvailable": "Eine neue Version der App ist verfügbar.",
     "refresh": "Aktualisieren",
-    "ariaLabel": "Eine neue Version der App ist verfügbar. Klicken Sie hier, um die Seite zu aktualisieren."
+    "ariaLabel": "Eine neue Version der App ist verfügbar. Klicke hier, um die Seite zu aktualisieren."
   },
-  "youAreOfflineText": "Es scheint, dass Sie derzeit offline sind, überprüfen Sie Ihre Internetverbindung",
-  "double-tap-zoom": "Zum Zoomen doppeltippen",
+  "youAreOfflineText": "Es scheint, dass du derzeit offline bist. Überprüfe deine Internetverbindung.",
+  "double-tap-zoom": "Zum Zoomen doppelt tippen",
   "PreferredDelivery": {
     "general": {
       "assistantName": "DHL Wunschzustellung",
-      "wunschpaketIntroduction": "Mit den Services von DHL Wunschzustellung entscheiden Sie, wann und wo Sie Ihre Pakete empfangen.",
-      "wunschpaketOptions": "Wählen Sie Ihre bevorzugte Lieferoption aus:",
+      "wunschpaketIntroduction": "Mit den Services von DHL Wunschzustellung entscheidest du, wann und wo du deine Pakete empfängst.",
+      "wunschpaketOptions": "Wähle deine bevorzugte Lieferoption aus:",
       "wunschpaketTitle": "DHL Wunschzustellung",
       "wunschtagTitle": "Liefertag: Lieferung zum gewünschten Tag",
       "wunschortTitle": "Ablageort: Lieferung an den gewünschten Ablageort",
-      "wunschnachbarTitle": "Nachbar: Lieferung an den Nachbarn Ihrer Wahl",
-      "wunschtagTooltip": "Sie haben die Möglichkeit einen der angezeigten Tage als Liefertag für die Lieferung Ihrer Waren auszuwählen. Andere Tage sind aufgrund der Lieferprozesse aktuell nicht möglich.",
-      "wunschortTooltip": "Bestimmen Sie einen wettergeschützten und nicht einsehbaren Platz auf Ihrem Grundstück, an dem wir das Paket während Ihrer Abwesenheit hinterlegen dürfen.",
-      "wunschnachbarTooltip": "Bestimmen Sie eine Person in Ihrer unmittelbaren Nachbarschaft, bei der wir Ihr Paket abgeben dürfen. Diese sollte im gleichen Haus, direkt gegenüber oder nebenan wohnen.",
+      "wunschnachbarTitle": "Nachbar: Lieferung an den Nachbarn deiner Wahl",
+      "wunschtagTooltip": "Du hast die Möglichkeit, einen der angezeigten Tage als Liefertag für die Lieferung deiner Waren auszuwählen. Andere Tage sind aufgrund der Lieferprozesse aktuell nicht möglich.",
+      "wunschortTooltip": "Bestimme einen wettergeschützten und nicht einsehbaren Platz auf deinem Grundstück, an dem wir das Paket während deiner Abwesenheit hinterlegen dürfen.",
+      "wunschnachbarTooltip": "Bestimme eine Person in deiner unmittelbaren Nachbarschaft, bei der wir dein Paket abgeben dürfen. Diese sollte im gleichen Haus, direkt gegenüber oder nebenan wohnen.",
       "wunschortExample": "z.B. Garage, Terrasse",
       "wunschnachbarExampleName": "Nachname, Vorname",
       "wunschnachbarExampleAddress": "Straße, Hausnummer, PLZ und Ort",
@@ -1193,22 +1193,22 @@
       "preferredNeighbourNameAlertMessage": "Nachbar: Nachname, Vorname eingeben.",
       "preferredNeighbourAddressMessage": "Nachbar: Straße, Hausnummer, PLZ und Ort eingeben.",
       "preferredNeigbourMaxCharViolation": "Maximale Zeichenanzahl (100) überschritten.",
-      "preferredNeighbourFullName": "Geben Sie den vollständigen Namen Ihres bevorzugten Nachbarn ein",
-      "preferredNeighbourAddress": "Geben Sie die vollständige Adresse Ihres bevorzugten Nachbarn ein",
-      "preferredDropOffLocation": "Geben Sie Ihren bevorzugten Ablageort an",
+      "preferredNeighbourFullName": "Gib den vollständigen Namen deines bevorzugten Nachbarn ein",
+      "preferredNeighbourAddress": "Gib die vollständige Adresse deines bevorzugten Nachbarn ein",
+      "preferredDropOffLocation": "Gib deinen bevorzugten Ablageort an",
       "submitWunschpaketServices": "Einstellungen für Wunschzustellung-Services übernommen.",
       "apply": "Übernehmen",
-      "invalidPostalCodeMessage": "Bitte prüfen Sie die Eingabe der Postleitzahl. Es wird ein 5-stelliger numerischer Wert erwartet - z.B. '34117'.",
+      "invalidPostalCodeMessage": "Bitte prüfe die Eingabe der Postleitzahl. Es wird ein 5-stelliger numerischer Wert erwartet – z.B. \"34117\".",
       "additionalCharge": "Aufpreis"
     },
     "packstation": {
       "title": "DHL Packstation / Postfiliale",
       "zipcodeLabel": "Postleitzahl",
-      "zipcodeInvalid": "Geben Sie eine gültige Postleitzahl ein.",
+      "zipcodeInvalid": "Gib eine gültige Postleitzahl ein.",
       "zipcodePlaceholder": "PLZ",
       "cityLabel": "Stadt/Ort",
       "cityPlaceholder": "Ort",
-      "streetLabel": "Geben Sie Ihre Straße ein ",
+      "streetLabel": "Gib deine Straße ein",
       "streetPlaceholder": "Straße",
       "dropDownValues": {
         "postfilial": "Postfiliale",
@@ -1216,13 +1216,13 @@
       },
       "nameInfo": "Der Name wird aus der Rechnungsadresse übernommen. Die Postnummer und die Adresse der Packstation/Postfiliale werden als Lieferadresse übernommen.",
       "search": "Suchen",
-      "noResult2": "Bitte geben Sie mindestens die Postleitzahl oder den Ort ein.",
+      "noResult2": "Bitte gib mindestens die Postleitzahl oder den Ort ein.",
       "setPackstation": "Übernehmen",
-      "postNumberLabel": "Geben Sie Ihre Postnummer ein",
+      "postNumberLabel": "Gib deine Postnummer ein",
       "postNumberPlaceholder": "Postnummer",
       "packstationAddedSuccessMessage": "Die Packstation/Postfiliale wurde als Lieferadresse übernommen.",
       "containerTextInfo": "Gib eine Adresse ein und wähle einen Filter für den Abholort. Klicke anschließend auf eines der Suchergebnisse, um diesen Abholort auszuwählen.",
-      "postnumberRequired": "Die Postnummer ist eine Pflichtangabe. Bitte geben Sie Ihre DHL Postnummer ein.",
+      "postnumberRequired": "Die Postnummer ist eine Pflichtangabe. Bitte gib deine DHL Postnummer ein.",
       "days": {
         "Monday": "Montag",
         "Tuesday": "Dienstag",
