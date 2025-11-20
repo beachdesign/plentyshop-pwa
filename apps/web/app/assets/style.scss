@@ -144,7 +144,7 @@ header form[role="search"] {
 
 /* NavbarBottom für Mobile */
 .sc-navbarbottom {
-  @apply w-full fixed bottom-0 left-0 flex flex-row items-stretch bg-primary-700 pb-2 md:hidden;
+  @apply w-full fixed bottom-0 left-0 flex flex-row items-stretch bg-orange-700 pb-4 md:hidden;
 }
 
 /*   paths.ts shipping: '/shipping-info', <-- geändert von '/shipping'
