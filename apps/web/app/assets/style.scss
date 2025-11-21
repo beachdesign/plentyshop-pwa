@@ -291,7 +291,7 @@ header form[role="search"] {
 
   /* SmartChip Button mit sanftem Gradient-Hover */
 .sc-btn {
-  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-400;
+  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-300;
   background-color: #111; /* Fallback */
   position: relative;
   overflow: hidden;
@@ -320,7 +320,7 @@ header form[role="search"] {
 /* Orange-Gradient Sweep Button */
 
 .sc-btn-sweep {
-  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-400;
+  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-300;
   background-color: #111;
   position: relative;
   overflow: hidden;
