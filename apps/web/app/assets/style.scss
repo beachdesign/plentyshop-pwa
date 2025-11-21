@@ -165,8 +165,6 @@ header form[role="search"] {
     100% { background-position: 0%    50%; }
   }
 
-@layer utilities {
-
   /* Intro: "Smart. Safe." */
   .sc-text-intro {
     @apply bg-clip-text text-transparent;
@@ -288,4 +286,3 @@ header form[role="search"] {
     background-size: 200% 200%;
     background-position: 0% 50%;
   }
-}
