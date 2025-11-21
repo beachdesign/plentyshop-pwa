@@ -55,7 +55,7 @@
               <div class="mt-6 flex justify-center">
                 <a
                   :href="ctaHref('/sc-set-10_184_1143')"
-                  class="inline-flex items-center justify-center px-5 py-2 font-semibold rounded-md bg-gray-900 text-white hover:bg-amber-400 transition"
+                  class="sc-btn"
                   :aria-label="ctaAria('SC-Set 10')"
                 >
                   {{ ctaLabel }}
@@ -112,7 +112,7 @@
               <div class="mt-6 flex justify-center">
                 <a
                   :href="ctaHref('/sc-set-50_185_1144')"
-                  class="inline-flex items-center justify-center px-5 py-2 font-semibold rounded-md bg-gray-900 text-white hover:bg-amber-400 transition"
+                  class="sc-btn"
                   :aria-label="ctaAria('SC-Set 50')"
                 >
                   {{ ctaLabel }}
@@ -169,7 +169,7 @@
               <div class="mt-6 flex justify-center">
                 <a
                   :href="ctaHref('/sc-set-200_186_1145')"
-                  class="inline-flex items-center justify-center px-5 py-2 font-semibold rounded-md bg-gray-900 text-white hover:bg-amber-400 transition"
+                  class="sc-btn"
                   :aria-label="ctaAria('SC-Set 200')"
                 >
                   {{ ctaLabel }}
