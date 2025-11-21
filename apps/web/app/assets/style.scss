@@ -111,7 +111,7 @@ header form[role="search"] {
 
 /* Main Content Padding Bottom anpassen */
 .sc-main-content {
-  @apply pt-8 md:pt-8;
+  @apply pt-8;
 }
 
 /* CategoryPage Grid Anpassung */
@@ -150,6 +150,142 @@ header form[role="search"] {
 /*   paths.ts shipping: '/shipping-info', <-- geändert von '/shipping'
  */
 
-.sc-test {
-  background-color: red;
+/* Gradients */
+
+/* Keyframes – kurze & lange Animationen */
+  @keyframes sc-gradient-short {
+    0%   { background-position: 0%   50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0%   50%; }
+  }
+
+  @keyframes sc-gradient-long {
+    0%   { background-position: 1000% 50%; }
+    50%  { background-position: 500%  50%; }
+    100% { background-position: 0%    50%; }
+  }
+
+@layer utilities {
+
+  /* Intro: "Smart. Safe." */
+  .sc-text-intro {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      #6d59ab,
+      #6d59ab,
+      #9d77c4,
+      #6d59ab,
+      #6d59ab
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    animation: sc-gradient-short 4s linear infinite;
+  }
+
+  /* "As active as you" */
+  .sc-text-asactive {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      #647cff,
+      #23c8fe,
+      #23c8fe,
+      #23c8fe,
+      #647cff,
+      #647cff,
+      #647cff,
+      #647cff,
+      #647cff,
+      #647cff,
+      #647cff
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    animation: sc-gradient-short 2s linear infinite;
+  }
+
+  /* Neon-Pink Akzent */
+  .sc-text-neon-pink {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      #fa1e69,
+      #fa1e69,
+      #fa1e69,
+      #fd7d39,
+      #fa1e69,
+      #fa1e69
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    animation: sc-gradient-short 4s linear infinite;
+  }
+
+  /* Orange-CTA Text */
+  .sc-text-orange {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      #fc513a,
+      #fc513a,
+      #fc513a,
+      #ffa041,
+      #fc513a,
+      #fc513a
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    animation: sc-gradient-short 4s linear infinite;
+  }
+
+  /* "Your style" – langer Regenbogenlauf */
+  .sc-text-yourstyle {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      #e200b8,
+      #8d2be3,
+      #ff8400,
+      #5f49cc,
+      #e1a87b,
+      #b968a6,
+      #e15c5c,
+      #93d14f,
+      #ffde00,
+      #e81a1f,
+      #e8a265,
+      #1a9ff4,
+      #5f31d1,
+      #e200b8
+    );
+    background-size: 1000% 200%;
+    background-position: 0% 50%;
+    animation: sc-gradient-long 95s linear infinite;
+  }
+
+  /* "Share info" */
+  .sc-text-shareinfo {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      #f75e5e,
+      #f75e5e,
+      #f75e5e,
+      #ff9090,
+      #f75e5e,
+      #f75e5e
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    animation: sc-gradient-short 4s linear infinite;
+  }
+
+  /* Simple Orange-Gradient ohne Animation */
+  .sc-text-orange-simple {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #ffa041, #fc3a3c);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+  }
 }
