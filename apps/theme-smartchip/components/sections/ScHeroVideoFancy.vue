@@ -46,7 +46,7 @@
           <div v-if="ctaHref && ctaLabel" class="mt-8">
             <a
               :href="ctaHref"
-              class="sc-btn-sweep"
+              class="sc-btn"
             >
               {{ ctaLabel }}
             </a>

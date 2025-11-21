@@ -289,11 +289,13 @@ header form[role="search"] {
 
 /* Orange-Gradient Button mit Hover-Effekt */
 
-  .sc-btn {
-  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-300;
-  background-color: #111; /* fallback */
+  /* SmartChip Button mit sanftem Gradient-Hover */
+.sc-btn {
+  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-400;
+  background-color: #111; /* Fallback */
   position: relative;
   overflow: hidden;
+  z-index: 1; /* Text-Ebene */
 }
 
 .sc-btn::after {
@@ -302,9 +304,12 @@ header form[role="search"] {
   inset: 0;
   background-image: linear-gradient(120deg, #ffa041 0%, #fc3a3c 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   opacity: 0;
-  transition: opacity .3s ease, background-position .6s ease;
-  z-index: 0;
+  transition:
+    opacity 0.25s ease,
+    background-position 0.6s ease;
+  z-index: -1; /* Unterhalb vom Button-Inhalt */
 }
 
 .sc-btn:hover::after {
@@ -312,15 +317,10 @@ header form[role="search"] {
   background-position: 100% 50%;
 }
 
-.sc-btn > * {
-  position: relative;
-  z-index: 1; /* Text bleibt sichtbar */
-}
-
 /* Orange-Gradient Sweep Button */
 
 .sc-btn-sweep {
-  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-300;
+  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-md text-white transition-all duration-400;
   background-color: #111;
   position: relative;
   overflow: hidden;
