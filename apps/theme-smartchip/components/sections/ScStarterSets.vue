@@ -23,7 +23,7 @@
         </p>
       </header>
 
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-2">
         <!-- SC-Set 50 -->
         <article
           class="bg-white border border-gray-200 shadow-sm rounded-lg overflow-hidden flex flex-col"
@@ -36,24 +36,24 @@
               </h3>
             </div>
 
-            <div class="p-10 pb-0">
-              <div class="relative pb-[100%]">
-                <ClientOnly>
+            <div class="p-4 pb-0">
+              <ClientOnly>
+                <div class="relative pb-4">
                   <component
                     :is="isAuthorized ? 'a' : 'div'"
                     :href="isAuthorized ? ctaHref('/sc-set-50_185_1144') : undefined"
-                    class="absolute inset-0"
+                    class="block relative pb-[100%]"
                   >
                     <img
                       src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-50.webp"
                       alt="Set mit 50 Smart Chips"
-                      class="w-full h-full object-cover"
+                      class="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
                     >
                   </component>
-                </ClientOnly>
-              </div>
+                </div>
+              </ClientOnly>
             </div>
 
             <hr class="mt-6 mb-4 border-gray-200">
@@ -81,7 +81,7 @@
               <div class="mt-6 flex justify-center">
                 <a
                   :href="ctaHref('/sc-set-50_185_1144')"
-                  class="inline-flex items-center justify-center px-5 py-2 font-semibold rounded-md bg-gray-900 text-white hover:bg-amber-400 transition"
+                  class="sc-btn"
                   :aria-label="ctaAria('SC-Set 50')"
                 >
                   {{ ctaLabel }}
@@ -103,24 +103,24 @@
               </h3>
             </div>
 
-            <div class="p-10 pb-0">
-              <div class="relative pb-[100%]">
-                <ClientOnly>
+            <div class="p-4 pb-0">
+              <ClientOnly>
+                <div class="relative pb-4">
                   <component
                     :is="isAuthorized ? 'a' : 'div'"
                     :href="isAuthorized ? ctaHref('/sc-set-200_186_1145') : undefined"
-                    class="absolute inset-0"
+                    class="block relative pb-[100%]"
                   >
                     <img
                       src="https://cdn02.plentymarkets.com/ehe3e071agu5/frontend/sc-content/sc-set-200.webp"
                       alt="Set mit 200 Smart Chips"
-                      class="w-full h-full object-cover"
+                      class="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
                     >
                   </component>
-                </ClientOnly>
-              </div>
+                </div>
+              </ClientOnly>
             </div>
 
             <hr class="mt-6 mb-4 border-gray-200">
@@ -148,7 +148,7 @@
               <div class="mt-6 flex justify-center">
                 <a
                   :href="ctaHref('/sc-set-200_186_1145')"
-                  class="inline-flex items-center justify-center px-5 py-2 font-semibold rounded-md bg-gray-900 text-white hover:bg-amber-400 transition"
+                  class="sc-btn"
                   :aria-label="ctaAria('SC-Set 200')"
                 >
                   {{ ctaLabel }}
@@ -157,9 +157,6 @@
             </ClientOnly>
           </div>
         </article>
-
-        <!-- Optional: dritte Spalte leer / später wieder Set 10 -->
-        <!-- Du kannst hier selbst noch eine leere col oder Promo einbauen -->
       </div>
     </div>
   </section>
@@ -168,21 +165,33 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+// Login-Status aus deinem vorhandenen Composable
 const { isAuthorized } = useCustomer()
 
+/**
+ * CTA-Label abhängig vom Login
+ */
 const ctaLabel = computed(() =>
   isAuthorized.value ? 'Zum Set' : 'Jetzt registrieren',
 )
 
+/**
+ * CTA-Href abhängig vom Login
+ * - Public: /register
+ * - Eingeloggt: übergebener Pfad unverändert
+ */
 const ctaHref = (path: string) => {
   if (!isAuthorized.value) return '/register'
   return path
 }
 
+/**
+ * A11y: aria-label dynamisch
+ */
 const ctaAria = (setName: string) =>
   isAuthorized.value ? `Zum ${setName} wechseln` : 'Jetzt registrieren'
 </script>
 
 <style scoped>
-/* alles Tailwind; die Klasse animated-gradient-text-intro kommt global */
+/* alles Tailwind; animated-gradient-text-intro kommt global */
 </style>
