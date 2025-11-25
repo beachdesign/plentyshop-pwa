@@ -29,6 +29,9 @@ export default {
         'display-2': {
           fontFamily: 'inherit',
         },
+        'display-3': {
+          fontFamily: 'inherit',
+        },
         'headline-1': {
           fontFamily: 'inherit',
         },
