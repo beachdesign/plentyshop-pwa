@@ -56,8 +56,8 @@ const { getRobots, setRobotForStaticPage } = useRobots()
 getRobots()
 setRobotForStaticPage('Homepage')
 
-const { setBlocksListContext } = useBlockManager()
-setBlocksListContext('content')
+const { setBlocksListContext } = useBlocksList();
+setBlocksListContext('content');
 
 const { user, isAuthorized, getSession } = useCustomer()
 
