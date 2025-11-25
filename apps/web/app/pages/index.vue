@@ -106,8 +106,8 @@ const heroTitleParts = computed(() => {
   }
 
   return {
-    highlight: 'Wähle dein',
-    rest: ' Starter-Set',
+    rest: 'Wähle dein',
+    highlight: ' Starter-Set',
   }
 })
 
