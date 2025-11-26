@@ -69,7 +69,7 @@
                 <strong>1 x Builder H</strong> <br>
                 <strong>1 x Finish</strong> <br>
                 <strong>1 x SC Pyramide</strong> <br>
-                <strong>25 x Feilensets</strong>
+                <strong>10 x Feilensets</strong>
               </li>
               <li class="text-center">
                 Inklusive <strong>Online-Schulung</strong>
@@ -136,7 +136,7 @@
                 <strong>1 x Builder H</strong> <br>
                 <strong>1 x Finish</strong> <br>
                 <strong>1 x SC Pyramide</strong> <br>
-                <strong>100 x Feilensets</strong>
+                <strong>10 x Feilensets</strong>
               </li>
               <li class="text-center">
                 Inklusive <strong>Online-Schulung</strong>
